@@ -28,7 +28,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-primary">Email</h4>
-                  <a href="mailto:info@confia.es" className="text-muted-foreground hover:text-primary transition-colors">info@confia.es</a>
+                  <a href="mailto:bdlg@confiax.es" className="text-muted-foreground hover:text-primary transition-colors">bdlg@confiax.es</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -37,7 +37,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-primary">Teléfono</h4>
-                  <a href="tel:+34910123456" className="text-muted-foreground hover:text-primary transition-colors">+34 910 123 456</a>
+                  <a href="tel:+34643633288" className="text-muted-foreground hover:text-primary transition-colors">+34 643633288</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
