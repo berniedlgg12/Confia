@@ -1,25 +1,11 @@
-import Image from "next/image";
 import { Quote, Shield, Target, Eye } from 'lucide-react';
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import CtaSection from "@/components/pages/shared/CtaSection";
 
 const AboutPage = () => {
-  const officeImage = PlaceHolderImages.find(p => p.id === 'about-office');
-  const teamImage = PlaceHolderImages.find(p => p.id === 'about-team');
-
   return (
     <>
-      <div className="relative isolate overflow-hidden bg-secondary py-24 sm:py-32">
-        {officeImage && (
-         <Image
-          src={officeImage.imageUrl}
-          alt={officeImage.description}
-          fill
-          className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-10"
-          data-ai-hint={officeImage.imageHint}
-        />
-        )}
-        <div className="container mx-auto text-center relative">
+      <div className="bg-secondary py-24 sm:py-32">
+        <div className="container mx-auto text-center">
             <h1 className="font-headline text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
               Somos sus Asesores de Confianza
             </h1>
@@ -30,10 +16,10 @@ const AboutPage = () => {
       </div>
 
       <div className="container mx-auto py-16 sm:py-24">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="order-2 md:order-1">
+        <div className="max-w-4xl mx-auto">
+            <div className="text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">Nuestra Historia y Filosofía</h2>
-                <div className="mt-6 space-y-4 text-muted-foreground">
+                <div className="mt-6 space-y-4 text-muted-foreground max-w-3xl mx-auto">
                     <p>
                         CONFÍA Agencia de Seguros nació de la visión de un grupo de profesionales con décadas de experiencia en los sectores asegurador y financiero. Observamos una necesidad clara en el mercado: las empresas españolas, especialmente los contratistas, requerían un socio especializado en garantías que comprendiera sus retos y les ofreciera soluciones más allá del rígido sistema bancario.
                     </p>
@@ -41,18 +27,6 @@ const AboutPage = () => {
                         Nuestra filosofía se basa en tres pilares: <strong className="text-primary">Verdad</strong>, <strong className="text-primary">Enfoque</strong> y <strong className="text-primary">Simplicidad</strong>. Creemos en las relaciones a largo plazo y en ser asesores estratégicos para nuestros protegidos.
                     </p>
                 </div>
-            </div>
-            <div className="order-1 md:order-2">
-                {teamImage && (
-                 <Image
-                    src={teamImage.imageUrl}
-                    alt={teamImage.description}
-                    width={800}
-                    height={600}
-                    className="rounded-lg shadow-xl"
-                    data-ai-hint={teamImage.imageHint}
-                />
-                )}
             </div>
         </div>
 
