@@ -13,10 +13,11 @@ const Logo = ({ className }: { className?: string }) => {
         3. Ajusta el `width` y `height` según las dimensiones de tu logo.
       */}
       <Image 
-        src="/logo.svg" 
+        src="/usos 01.svg" 
         alt="CONFÍA Logo" 
         width={32} 
         height={32} 
+        className="h-8 w-auto"
       />
       <span className="mt-1">CONFÍA</span>
     </Link>
