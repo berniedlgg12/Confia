@@ -9,7 +9,7 @@ const Logo = ({ className }: { className?: string }) => {
       {/* 
         Para cambiar tu logo:
         1. Sube tu archivo de logo (SVG, PNG, etc.) a la carpeta `public`.
-        2. Reemplaza `/logo.svg` con la ruta a tu nuevo archivo.
+        2. Reemplaza /logotipo-usos-01.svg con la ruta a tu nuevo archivo.
         3. Ajusta el `width` y `height` según las dimensiones de tu logo.
       */}
       <Image 
