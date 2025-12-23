@@ -25,13 +25,13 @@ const SuretyBondPage = () => {
       <div className="container mx-auto py-16 sm:py-24">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
-            <h2 className="font-headline text-3xl font-bold text-primary mb-4">Un Contrato de Garantía</h2>
+            <h2 className="font-headline text-3xl font-bold text-primary mb-4">Un Contrato de Garantía a su Favor</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
                 El seguro de caución es un contrato mediante el cual una compañía aseguradora se obliga a indemnizar al beneficiario (asegurado) por los perjuicios que sufra en caso de que el contratista (tomador) incumpla las obligaciones, legales o contractuales, que mantenga con él.
               </p>
               <p>
-                En esencia, es una garantía de cumplimiento que sustituye a los tradicionales y más costosos avales bancarios. Su principal objetivo es asegurar que un acuerdo entre dos partes se cumpla en tiempo y forma.
+                En esencia, es una garantía de cumplimiento que sustituye a los tradicionales y más costosos avales bancarios. Su principal objetivo es asegurar que un acuerdo entre dos partes se cumpla en tiempo y forma, protegiendo al beneficiario sin perjudicar la capacidad financiera del contratista.
               </p>
             </div>
           </div>
@@ -41,10 +41,10 @@ const SuretyBondPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="flex items-start"><Check className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" /> Empresas que licitan con la Administración Pública.</p>
-              <p className="flex items-start"><Check className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" /> Constructoras y promotoras inmobiliarias.</p>
-              <p className="flex items-start"><Check className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" /> Empresas de servicios, suministros o ingeniería.</p>
-              <p className="flex items-start"><Check className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" /> Agencias de viaje y operadores turísticos.</p>
-              <p className="flex items-start"><Check className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" /> Empresas que operan en mercados internacionales.</p>
+              <p className="flex items-start"><Check className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" /> Constructoras, promotoras e ingenierías.</p>
+              <p className="flex items-start"><Check className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" /> Empresas de servicios, suministros o instalación.</p>
+              <p className="flex items-start"><Check className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" /> Empresas con obligaciones legales específicas (ej. agencias de viaje).</p>
+              <p className="flex items-start"><Check className="w-5 h-5 text-accent mr-3 mt-1 flex-shrink-0" /> Compañías que operan en mercados internacionales.</p>
             </CardContent>
           </Card>
         </div>

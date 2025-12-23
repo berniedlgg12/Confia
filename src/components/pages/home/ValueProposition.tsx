@@ -1,26 +1,26 @@
-import { Award, Users, Zap, ShieldCheck } from 'lucide-react';
+import { Check, Compass, Smile } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const features = [
   {
-    icon: <Award className="h-8 w-8 text-accent" />,
-    title: 'Expertise Técnico',
-    description: 'Profundo conocimiento del sector y la normativa para ofrecerle siempre la mejor solución.',
+    icon: <Check className="h-8 w-8 text-accent" />,
+    title: 'Verdad ante Todo',
+    description: 'Transparencia y honestidad como base de cada interacción. Asesoramiento claro para decisiones informadas.',
   },
   {
-    icon: <Users className="h-8 w-8 text-accent" />,
-    title: 'Servicio Personalizado',
-    description: 'Cada cliente es único. Analizamos sus necesidades para diseñar una cobertura a medida.',
+    icon: <Compass className="h-8 w-8 text-accent" />,
+    title: 'Enfoque',
+    description: 'Nos concentramos en lo que importa: encontrar la solución más eficiente para su necesidad específica.',
   },
   {
-    icon: <Zap className="h-8 w-8 text-accent" />,
-    title: 'Agilidad vs. Banca',
-    description: 'Procesos más rápidos y flexibles que los de la banca tradicional, para que no pierda oportunidades.',
+    icon: <Smile className="h-8 w-8 text-accent" />,
+    title: 'Simplicidad',
+    description: 'Traducimos la complejidad del sector asegurador en procesos y soluciones sencillas y comprensibles.',
   },
   {
-    icon: <ShieldCheck className="h-8 w-8 text-accent" />,
-    title: 'Solidez y Confianza',
-    description: 'Trabajamos con aseguradoras de primer nivel para garantizar la máxima solvencia y tranquilidad.',
+    icon: <div className="font-headline text-2xl font-bold text-accent">VES</div>,
+    title: 'Nuestros Valores',
+    description: 'Verdad, Enfoque y Simplicidad. Los pilares que guían cada una de nuestras acciones para protegerle.',
   },
 ];
 
@@ -29,12 +29,12 @@ const ValueProposition = () => {
     <section className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-base font-semibold leading-7 text-accent font-headline">Nuestra Diferencia</h2>
+          <h2 className="text-base font-semibold leading-7 text-accent font-headline">Nuestra Filosofía</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-            Más que un seguro, un socio estratégico
+            Más que una agencia, sus socios en protección
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            En CONFÍA no solo emitimos pólizas, construimos relaciones de confianza a largo plazo, entendiendo y apoyando el crecimiento de su empresa.
+            En CONFÍA construimos relaciones a largo plazo basadas en nuestros valores fundamentales. No solo emitimos pólizas, generamos soluciones simples para que usted se sienta seguro.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">

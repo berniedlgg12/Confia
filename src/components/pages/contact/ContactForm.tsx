@@ -18,7 +18,7 @@ const formSchema = z.object({
   company: z.string().min(2, 'El nombre de la empresa es requerido.'),
   email: z.string().email('Por favor, introduzca un email válido.'),
   phone: z.string().optional(),
-  message: z.string().min(10, 'Por favor, detalle su consulta.'),
+  message: z.string().min(10, 'Por favor, detalle su consulta. ¿Qué tipo de garantía necesita?'),
   privacyPolicy: z.boolean().refine(val => val === true, {
     message: "Debe aceptar la política de privacidad."
   })
@@ -48,7 +48,7 @@ const ContactForm = () => {
     console.log(data);
     toast({
       title: "Mensaje Enviado",
-      description: "Gracias por contactar con nosotros. Nos pondremos en contacto con usted a la mayor brevedad.",
+      description: "Gracias por contactar con CONFÍA. Un asesor se pondrá en contacto con usted a la mayor brevedad.",
     });
     form.reset();
   };
@@ -58,7 +58,7 @@ const ContactForm = () => {
       <CardHeader>
         <CardTitle className="font-headline">Formulario de Consulta</CardTitle>
         <CardDescription>
-          Un asesor se pondrá en contacto con usted para analizar su caso.
+          Un asesor analizará su caso y contactará con usted para ofrecerle una solución a medida.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -66,7 +66,7 @@ const ContactForm = () => {
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormField control={form.control} name="name" render={({ field }) => (
-                <FormItem><FormLabel>Nombre Completo</FormLabel><FormControl><Input placeholder="Su nombre" {...field} /></FormControl><FormMessage /></FormItem>
+                <FormItem><FormLabel>Nombre Completo</FormLabel><FormControl><Input placeholder="Su nombre y apellidos" {...field} /></FormControl><FormMessage /></FormItem>
               )} />
               <FormField control={form.control} name="company" render={({ field }) => (
                 <FormItem><FormLabel>Empresa</FormLabel><FormControl><Input placeholder="Nombre de su empresa" {...field} /></FormControl><FormMessage /></FormItem>
@@ -77,11 +77,11 @@ const ContactForm = () => {
                 <FormItem><FormLabel>Email</FormLabel><FormControl><Input type="email" placeholder="su@email.com" {...field} /></FormControl><FormMessage /></FormItem>
               )} />
               <FormField control={form.control} name="phone" render={({ field }) => (
-                <FormItem><FormLabel>Teléfono (Opcional)</FormLabel><FormControl><Input type="tel" placeholder="Su teléfono" {...field} /></FormControl><FormMessage /></FormItem>
+                <FormItem><FormLabel>Teléfono (Opcional)</FormLabel><FormControl><Input type="tel" placeholder="Su teléfono de contacto" {...field} /></FormControl><FormMessage /></FormItem>
               )} />
             </div>
             <FormField control={form.control} name="message" render={({ field }) => (
-                <FormItem><FormLabel>Su Mensaje</FormLabel><FormControl><Textarea placeholder="Describa brevemente su necesidad o consulta..." {...field} rows={5} /></FormControl><FormMessage /></FormItem>
+                <FormItem><FormLabel>Su Mensaje</FormLabel><FormControl><Textarea placeholder="Describa brevemente su necesidad. Por ejemplo: 'Necesito una garantía para una licitación pública' o 'Quiero asegurar las cantidades a cuenta de una promoción'." {...field} rows={5} /></FormControl><FormMessage /></FormItem>
             )} />
             <FormField
               control={form.control}

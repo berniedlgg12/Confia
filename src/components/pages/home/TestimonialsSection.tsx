@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-5 lg:gap-16 items-center">
             <div className="lg:col-span-2 text-center lg:text-left mb-12 lg:mb-0">
-                <h2 className="text-base font-semibold leading-7 text-accent font-headline">Construimos Confianza</h2>
+                <h2 className="text-base font-semibold leading-7 text-accent font-headline">Nunca fallamos al Protegido</h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
                     Lo que dicen nuestros clientes
                 </p>
@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
                                 alt={`Foto de ${testimonial.name}`}
                                 width={56}
                                 height={56}
-                                className="rounded-full"
+                                className="rounded-full object-cover"
                                 data-ai-hint={testimonial.image.imageHint}
                                 />
                             )}

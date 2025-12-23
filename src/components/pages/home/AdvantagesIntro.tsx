@@ -4,10 +4,10 @@ import { CheckCircle2 } from 'lucide-react';
 
 const advantages = [
   'Sin impacto en CIRBE',
-  'No inmoviliza capital',
-  'No reduce su capacidad de financiación',
-  'Más flexible y ágil que un aval',
-  'Ventajas contables y fiscales'
+  'No inmoviliza capital ni saldos',
+  'Libera sus líneas de crédito bancarias',
+  'Proceso más rápido y flexible que un aval',
+  'Coste menor y ventajas fiscales'
 ];
 
 const AdvantagesIntro = () => {
@@ -18,10 +18,10 @@ const AdvantagesIntro = () => {
           <div>
             <h2 className="text-base font-semibold leading-7 text-accent font-headline">La Alternativa Inteligente</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-              Libere el potencial de su empresa
+              Optimice la salud financiera de su empresa
             </p>
             <p className="mt-6 text-lg text-muted-foreground">
-              El seguro de caución es la herramienta financiera que le permite crecer sin las ataduras y costes de los avales bancarios tradicionales. Descubra por qué cada vez más empresas eligen esta opción.
+              El seguro de caución es la herramienta que le permite crecer sin las ataduras y costes de los avales bancarios tradicionales. Descubra por qué cada vez más empresas eligen esta opción.
             </p>
             <Button asChild className="mt-8" size="lg">
               <Link href="/ventajas">Ver todas las ventajas</Link>

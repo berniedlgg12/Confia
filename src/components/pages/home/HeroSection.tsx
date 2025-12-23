@@ -13,10 +13,10 @@ const HeroSection = () => {
       />
       <div className="container mx-auto text-center relative">
         <h1 className="font-headline text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl lg:text-7xl">
-          Solidez y Confianza para sus Proyectos
+          Generamos Soluciones Simples
         </h1>
         <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground sm:text-xl">
-          Nos especializamos en Seguros de Caución, la alternativa inteligente a los avales bancarios que impulsa su negocio sin inmovilizar recursos.
+          Especialistas en Seguros de Caución y Responsabilidad Civil para contratistas. Garantizamos la solidez de sus proyectos con agilidad y confianza.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-4">
           <Button asChild size="lg">

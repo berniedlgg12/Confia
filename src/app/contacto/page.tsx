@@ -10,7 +10,7 @@ const ContactPage = () => {
             Contacte con Nosotros
           </h1>
           <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
-            Estamos aquí para ayudarle. Rellene el formulario o utilice nuestros datos de contacto directo para una consulta sin compromiso.
+            Estamos aquí para ayudarle. Rellene el formulario o utilice nuestros datos de contacto directo para una consulta sin compromiso y descubra cómo podemos proteger sus proyectos.
           </p>
         </div>
       </div>
@@ -49,6 +49,10 @@ const ContactPage = () => {
                   <p className="text-muted-foreground">Calle de la Confianza, 123<br />28001 Madrid, España</p>
                 </div>
               </div>
+            </div>
+            <div className="mt-8 border-t pt-6">
+              <h4 className="font-semibold text-primary mb-2">Horario</h4>
+              <p className="text-muted-foreground">Lunes a Viernes: 9:00 - 18:00</p>
             </div>
           </div>
         </div>

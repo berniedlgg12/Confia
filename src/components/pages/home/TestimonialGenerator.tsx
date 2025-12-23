@@ -62,10 +62,10 @@ const TestimonialGenerator = () => {
       <CardHeader>
         <CardTitle className="flex items-center gap-2 font-headline">
           <Sparkles className="h-6 w-6 text-accent" />
-          Herramienta IA de Contenido
+          Generador de Intro para Testimonios
         </CardTitle>
         <CardDescription>
-          Genere una introducción personalizada y de impacto para un testimonio de cliente utilizando IA.
+          Use nuestra IA para crear una introducción atractiva y personalizada para un testimonio de cliente. Pegue los datos y el texto, y nosotros generamos el párrafo inicial.
         </CardDescription>
       </CardHeader>
       <Form {...form}>
@@ -76,21 +76,21 @@ const TestimonialGenerator = () => {
                     <FormItem><FormLabel>Nombre Cliente</FormLabel><FormControl><Input placeholder="Ej: Javier García" {...field} /></FormControl><FormMessage /></FormItem>
                 )} />
                 <FormField control={form.control} name="clientTitle" render={({ field }) => (
-                    <FormItem><FormLabel>Cargo Cliente</FormLabel><FormControl><Input placeholder="Ej: Director" {...field} /></FormControl><FormMessage /></FormItem>
+                    <FormItem><FormLabel>Cargo Cliente</FormLabel><FormControl><Input placeholder="Ej: Director de Contratación" {...field} /></FormControl><FormMessage /></FormItem>
                 )} />
             </div>
             <FormField control={form.control} name="companyName" render={({ field }) => (
-                <FormItem><FormLabel>Empresa</FormLabel><FormControl><Input placeholder="Ej: G-Construct" {...field} /></FormControl><FormMessage /></FormItem>
+                <FormItem><FormLabel>Empresa Cliente</FormLabel><FormControl><Input placeholder="Ej: G-Construct" {...field} /></FormControl><FormMessage /></FormItem>
             )} />
             <FormField control={form.control} name="testimonialText" render={({ field }) => (
-                <FormItem><FormLabel>Texto del Testimonio</FormLabel><FormControl><Textarea placeholder="Pegue aquí el testimonio completo..." {...field} rows={4} /></FormControl><FormMessage /></FormItem>
+                <FormItem><FormLabel>Texto del Testimonio</FormLabel><FormControl><Textarea placeholder="Pegue aquí el testimonio completo que le ha proporcionado su cliente..." {...field} rows={4} /></FormControl><FormMessage /></FormItem>
             )} />
              <FormField control={form.control} name="productOrService" render={({ field }) => (
-                <FormItem><FormLabel>Producto/Servicio</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
+                <FormItem><FormLabel>Producto o Servicio Contratado</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
             )} />
             {generatedIntro && (
               <div className="bg-accent/10 p-4 rounded-md border border-accent/20">
-                <h4 className="font-semibold text-primary mb-2">Introducción Generada:</h4>
+                <h4 className="font-semibold text-primary mb-2">Introducción Generada (en español):</h4>
                 <p className="text-sm text-primary italic">&ldquo;{generatedIntro}&rdquo;</p>
               </div>
             )}

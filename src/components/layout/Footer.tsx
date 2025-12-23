@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           <Logo />
           <p className="text-sm text-muted-foreground">
-            Expertos en seguros de caución, protegiendo sus compromisos con solidez y confianza.
+            Expertos en seguros de caución y responsabilidad civil, protegiendo sus compromisos con solidez y confianza.
           </p>
         </div>
         <div>

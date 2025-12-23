@@ -1,20 +1,20 @@
-import { FileText, Building, Globe } from 'lucide-react';
+import { FileText, Shield, HardHat } from 'lucide-react';
 
 const services = [
   {
     icon: <FileText className="w-10 h-10 text-primary" />,
-    title: 'Garantías para Contratos',
-    description: 'Asegure el cumplimiento de sus obligaciones contractuales, tanto en ejecución de obra como en suministro de bienes y servicios.',
+    title: 'Seguros de Caución',
+    description: 'Garantice el cumplimiento de sus obligaciones contractuales y de licitación sin afectar sus líneas de crédito bancarias.',
   },
   {
-    icon: <Building className="w-10 h-10 text-primary" />,
-    title: 'Licitaciones Públicas',
-    description: 'Presente sus ofertas a la Administración Pública con las garantías de licitación y adjudicación que exige la ley.',
+    icon: <Shield className="w-10 h-10 text-primary" />,
+    title: 'Responsabilidad Civil para Contratistas',
+    description: 'Proteja su patrimonio frente a daños a terceros derivados de su actividad profesional y de la ejecución de sus obras.',
   },
   {
-    icon: <Globe className="w-10 h-10 text-primary" />,
-    title: 'Proyectos Internacionales',
-    description: 'Le acompañamos en su expansión internacional con garantías adaptadas a los requisitos de cada país.',
+    icon: <HardHat className="w-10 h-10 text-primary" />,
+    title: 'Asesoría Especializada',
+    description: 'Le acompañamos en el análisis de riesgos y en la selección de las coberturas que su proyecto realmente necesita.',
   },
 ];
 
@@ -24,10 +24,10 @@ const ServicesSnapshot = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-            Cobertura Integral para cada Necesidad
+            Cobertura Integral para Contratistas
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Ofrecemos un portfolio completo de seguros de caución para cubrir todas las fases de su actividad empresarial.
+            Ofrecemos un portfolio de soluciones enfocado en las necesidades específicas de las empresas del sector de la construcción y servicios.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

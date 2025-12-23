@@ -15,9 +15,9 @@ import {z} from 'genkit';
 const GeneratePersonalizedIntroInputSchema = z.object({
   clientName: z.string().describe('The name of the client providing the testimonial.'),
   clientTitle: z.string().describe('The title of the client providing the testimonial (e.g., CEO, Manager).'),
-  companyName: z.string().describe('The name of the client\u2019s company.'),
+  companyName: z.string().describe('The name of the client’s company.'),
   testimonialText: z.string().describe('The full text of the client testimonial.'),
-  productOrService: z.string().describe('The specific product or service the testimonial is about (e.g., \"Surety Bonds\").'),
+  productOrService: z.string().describe('The specific product or service the testimonial is about (e.g., "Surety Bonds").'),
 });
 
 export type GeneratePersonalizedIntroInput = z.infer<typeof GeneratePersonalizedIntroInputSchema>;
@@ -36,7 +36,7 @@ const prompt = ai.definePrompt({
   name: 'generatePersonalizedIntroPrompt',
   input: {schema: GeneratePersonalizedIntroInputSchema},
   output: {schema: GeneratePersonalizedIntroOutputSchema},
-  prompt: `You are an AI assistant specialized in creating personalized introductory text for client testimonials.
+  prompt: `You are an AI assistant specialized in creating personalized introductory text for client testimonials for a Spanish insurance agency named "CONFÍA".
   Your goal is to generate a concise and engaging introduction that highlights the key benefits and context of the testimonial.
 
   Given the following information, create a personalized introduction for the testimonial:
@@ -47,9 +47,13 @@ const prompt = ai.definePrompt({
   Testimonial Text: {{{testimonialText}}}
   Product/Service: {{{productOrService}}}
 
-  The introduction should be no more than two sentences and should clearly state the client's experience and the value they received from the product or service.
-  Focus on making the testimonial more relatable and impactful for potential customers.
-  The introduction should be in Spanish (Spain).
+  The introduction should be **one single sentence**, summarizing the client's main success or solved problem, and linking it to the company name and service.
+  The tone should be professional and impactful.
+  The output MUST be in Spanish (Spain).
+
+  Example:
+  Input: { clientName: 'Javier', companyName: 'G-Construct', productOrService: 'Seguro de Caución', testimonialText: 'El cambio a los seguros de caución con CONFÍA ha sido un antes y un después. Ahora podemos presentarnos a más concursos sin preocuparnos por el impacto en nuestras líneas de crédito.' }
+  Output: { introduction: 'Para G-Construct, la agilidad en la obtención de garantías para licitaciones es crucial. CONFÍA nos ha proporcionado una solución rápida y sin el consumo de recursos que suponían los avales bancarios.' }
 `,
 });
 

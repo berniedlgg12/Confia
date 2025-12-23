@@ -7,8 +7,8 @@ import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'CONFÍA Agencia de Seguros | Especialistas en Seguro de Caución',
-  description: 'Garantizamos la solidez de sus proyectos con seguros de caución a medida. Asesoría experta para empresas, licitaciones y contratos.',
-  keywords: 'seguro de caución, avales, garantías, licitaciones, construcción, Confía Seguros, España',
+  description: 'Generamos soluciones simples en seguros de caución y responsabilidad civil para contratistas.',
+  keywords: 'seguro de caución, seguro de responsabilidad civil, contratistas, fianzas, garantías, Confía Seguros, España',
 };
 
 export default function RootLayout({
