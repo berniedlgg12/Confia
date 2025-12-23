@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
           <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
               Lo que dicen nuestros protegidos
           </p>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-white">
               Nuestra mayor satisfacción es el éxito y la tranquilidad de las empresas que confían en nosotros.
           </p>
           
@@ -58,8 +58,8 @@ const TestimonialsSection = () => {
               <CarouselItem key={index}>
                   <Card className="border-none shadow-none bg-transparent">
                   <CardContent className="flex flex-col items-center text-center p-0">
-                      <p className="text-lg font-medium text-primary">&ldquo;{testimonial.intro}&rdquo;</p>
-                      <blockquote className="mt-4 text-muted-foreground border-l-2 border-accent pl-4 italic">
+                      <p className="text-lg font-medium text-white">&ldquo;{testimonial.intro}&rdquo;</p>
+                      <blockquote className="mt-4 text-white border-l-2 border-accent pl-4 italic">
                       {testimonial.text}
                       </blockquote>
                       <div className="mt-6 flex items-center gap-4">
