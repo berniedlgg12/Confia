@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'TangoSans';
+    src: url('/fonts/TangoSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'TangoSans';
+    src: url('/fonts/TangoSans-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root {
     --background: 0 0% 96.1%; /* #f5f5f5 */
     --foreground: 240 10% 3.9%;
