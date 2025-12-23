@@ -23,11 +23,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn('font-body antialiased min-h-screen flex flex-col relative')}>
+      <body className={cn('font-body antialiased min-h-screen flex flex-col relative bg-transparent')}>
         <div className="background-watermark fixed inset-0 -z-10"></div>
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
         <Toaster />
       </body>
     </html>
