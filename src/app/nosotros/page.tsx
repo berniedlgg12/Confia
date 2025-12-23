@@ -49,9 +49,8 @@ const AboutPage = () => {
         </div>
 
         <div className="mt-24 bg-primary text-primary-foreground rounded-lg p-12 relative overflow-hidden flex items-center justify-center">
-            <Quote className="absolute -top-4 -left-4 w-24 h-24 text-accent/20" />
             <blockquote className="text-center text-3xl font-medium leading-9 relative">
-                <p>&ldquo;Nunca fallarle al <span className="line-through">cliente</span>, PROTEGIDO.&rdquo;</p>
+                <p><span className="text-accent">&ldquo;</span>Nunca fallarle al <span className="line-through">cliente</span>, PROTEGIDO.<span className="text-accent">&rdquo;</span></p>
             </blockquote>
         </div>
       </div>
