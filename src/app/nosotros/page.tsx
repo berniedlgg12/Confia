@@ -70,7 +70,7 @@ const AboutPage = () => {
             <div className="bg-card p-8 rounded-lg shadow-sm">
                 <Shield className="w-12 h-12 text-accent mx-auto mb-4" />
                 <h3 className="text-2xl font-bold font-headline text-primary">Propósito</h3>
-                <p className="mt-2 text-muted-foreground">Proteger los proyectos y el patrimonio de nuestros clientes.</p>
+                <p className="mt-2 text-muted-foreground">Proteger los proyectos y el patrimonio de nuestros protegidos.</p>
             </div>
         </div>
 

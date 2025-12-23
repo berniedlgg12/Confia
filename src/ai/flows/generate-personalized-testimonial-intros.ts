@@ -4,7 +4,7 @@
 /**
  * @fileOverview Generates personalized introductory text for client testimonials using AI.
  *
- * - generatePersonalizedIntro - A function that generates personalized introductory text for a client testimonial.
+ * - generatePersonalizedIntro - A function that generates personalized introductory text for a protegido testimonial.
  * - GeneratePersonalizedIntroInput - The input type for the generatePersonalizedIntro function.
  * - GeneratePersonalizedIntroOutput - The return type for the generatePersonalizedIntro function.
  */
@@ -13,17 +13,17 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const GeneratePersonalizedIntroInputSchema = z.object({
-  clientName: z.string().describe('The name of the client providing the testimonial.'),
-  clientTitle: z.string().describe('The title of the client providing the testimonial (e.g., CEO, Manager).'),
-  companyName: z.string().describe('The name of the client’s company.'),
-  testimonialText: z.string().describe('The full text of the client testimonial.'),
+  protegidoName: z.string().describe('The name of the protegido providing the testimonial.'),
+  protegidoTitle: z.string().describe('The title of the protegido providing the testimonial (e.g., CEO, Manager).'),
+  companyName: z.string().describe('The name of the protegido’s company.'),
+  testimonialText: z.string().describe('The full text of the protegido testimonial.'),
   productOrService: z.string().describe('The specific product or service the testimonial is about (e.g., "Surety Bonds").'),
 });
 
 export type GeneratePersonalizedIntroInput = z.infer<typeof GeneratePersonalizedIntroInputSchema>;
 
 const GeneratePersonalizedIntroOutputSchema = z.object({
-  introduction: z.string().describe('A personalized introductory text for the client testimonial.'),
+  introduction: z.string().describe('A personalized introductory text for the protegido testimonial.'),
 });
 
 export type GeneratePersonalizedIntroOutput = z.infer<typeof GeneratePersonalizedIntroOutputSchema>;
@@ -41,8 +41,8 @@ const prompt = ai.definePrompt({
 
   Given the following information, create a personalized introduction for the testimonial:
 
-  Client Name: {{{clientName}}}
-  Client Title: {{{clientTitle}}}
+  Client Name: {{{protegidoName}}}
+  Client Title: {{{protegidoTitle}}}
   Company Name: {{{companyName}}}
   Testimonial Text: {{{testimonialText}}}
   Product/Service: {{{productOrService}}}
@@ -52,7 +52,7 @@ const prompt = ai.definePrompt({
   The output MUST be in Spanish (Spain).
 
   Example:
-  Input: { clientName: 'Javier', companyName: 'G-Construct', productOrService: 'Seguro de Caución', testimonialText: 'El cambio a los seguros de caución con CONFÍA ha sido un antes y un después. Ahora podemos presentarnos a más concursos sin preocuparnos por el impacto en nuestras líneas de crédito.' }
+  Input: { protegidoName: 'Javier', companyName: 'G-Construct', productOrService: 'Seguro de Caución', testimonialText: 'El cambio a los seguros de caución con CONFÍA ha sido un antes y un después. Ahora podemos presentarnos a más concursos sin preocuparnos por el impacto en nuestras líneas de crédito.' }
   Output: { introduction: 'Para G-Construct, la agilidad en la obtención de garantías para licitaciones es crucial. CONFÍA nos ha proporcionado una solución rápida y sin el consumo de recursos que suponían los avales bancarios.' }
 `,
 });

@@ -18,7 +18,7 @@ const testimonials = [
     image: PlaceHolderImages.find(p => p.id === 'testimonial-1'),
   },
   {
-    intro: "Promociones Urbanas S.L. ha encontrado en el seguro de caución de CONFÍA la herramienta perfecta para garantizar las entregas a cuenta de sus promociones, generando confianza en sus clientes finales.",
+    intro: "Promociones Urbanas S.L. ha encontrado en el seguro de caución de CONFÍA la herramienta perfecta para garantizar las entregas a cuenta de sus promociones, generando confianza en sus compradores finales.",
     text: "Necesitábamos una solución para las cantidades entregadas a cuenta que no afectara nuestra financiación para la construcción. CONFÍA entendió perfectamente nuestras necesidades y nos ofreció una póliza de caución que nos ha dado una flexibilidad enorme.",
     name: 'Laura Méndez',
     title: 'CEO, Promociones Urbanas S.L.',
@@ -35,12 +35,12 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 sm:py-24">
+    <section className="bg-background/0 py-16 sm:py-24">
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-base font-semibold leading-7 text-accent font-headline">Nunca fallamos al Protegido</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-              Lo que dicen nuestros clientes
+              Lo que dicen nuestros protegidos
           </p>
           <p className="mt-4 text-lg text-muted-foreground">
               Nuestra mayor satisfacción es el éxito y la tranquilidad de las empresas que confían en nosotros.
