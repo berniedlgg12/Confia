@@ -48,15 +48,11 @@ const AboutPage = () => {
             </div>
         </div>
 
-        <div className="mt-24 bg-primary text-primary-foreground rounded-lg p-12 relative overflow-hidden">
+        <div className="mt-24 bg-primary text-primary-foreground rounded-lg p-12 relative overflow-hidden flex items-center justify-center">
             <Quote className="absolute -top-4 -left-4 w-24 h-24 text-accent/20" />
-            <blockquote className="text-center text-2xl font-medium leading-9 relative">
-                <p>&ldquo;Nunca fallamos al <span className="line-through">CLIENTE</span>, PROTEGIDO.&rdquo;</p>
+            <blockquote className="text-center text-3xl font-medium leading-9 relative">
+                <p>&ldquo;Nunca fallamos al <span className="line-through">protegido</span>, PROTEGIDO.&rdquo;</p>
             </blockquote>
-            <footer className="mt-8 text-center">
-                <p className="font-bold">El Equipo Fundador</p>
-                <p className="text-primary-foreground/70">CONFÍA Agencia de Seguros</p>
-            </footer>
         </div>
       </div>
       <CtaSection />
