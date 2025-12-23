@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
     <section className="bg-background/0 py-16 sm:py-24">
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-base font-semibold leading-7 text-accent font-headline">Nunca fallamos al Protegido</h2>
+          <h2 className="text-base font-semibold leading-7 text-white font-headline">Nunca fallamos al Protegido</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
               Lo que dicen nuestros protegidos
           </p>
