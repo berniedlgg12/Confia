@@ -7,7 +7,7 @@ const Logo = ({ className }: { className?: string }) => {
   return (
     <Link href="/" className={cn("flex items-center", className)}>
       <Image 
-        src="/Logo/logotipo-usos-01.svg" 
+        src="/Logo/logotipo-usos-01.png" 
         alt="CONFÍA Logo"
         width={360}
         height={100}
