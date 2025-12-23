@@ -72,3 +72,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .background-watermark {
+    background-image: url('/Logo/logotipo-usos-08.png');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 120% -20%;
+    transform: rotate(-15deg);
+    opacity: 0.05;
+  }
+}
