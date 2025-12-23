@@ -5,15 +5,14 @@ import Image from 'next/image';
 
 const Logo = ({ className }: { className?: string }) => {
   return (
-    <Link href="/" className={cn("flex items-center gap-2 text-xl font-bold font-headline text-primary", className)}>
+    <Link href="/" className={cn("flex items-center", className)}>
       <Image 
         src="/Logo/logotipo-usos-01.svg" 
         alt="CONFÍA Logo"
-        width={32}
-        height={32}
-        className="h-8 w-auto"
+        width={140}
+        height={40}
+        className="h-10 w-auto"
       />
-      <span className="mt-1">CONFÍA</span>
     </Link>
   );
 };
