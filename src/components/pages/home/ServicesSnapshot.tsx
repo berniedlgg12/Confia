@@ -20,7 +20,7 @@ const services = [
 
 const ServicesSnapshot = () => {
   return (
-    <section className="py-16 sm:py-24 bg-secondary">
+    <section className="py-16 sm:py-24">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">

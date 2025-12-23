@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-secondary py-24 sm:py-32 lg:py-40">
+    <section className="relative py-24 sm:py-32 lg:py-40">
        <div
         className="absolute inset-0"
         style={{
