@@ -1,0 +1,63 @@
+import Link from 'next/link';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import Logo from '@/components/Logo';
+import { NAV_LINKS } from '@/lib/constants';
+
+const Footer = () => {
+  return (
+    <footer className="bg-secondary text-secondary-foreground border-t">
+      <div className="container py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="flex flex-col gap-4">
+          <Logo />
+          <p className="text-sm text-muted-foreground">
+            Expertos en seguros de caución, protegiendo sus compromisos con solidez y confianza.
+          </p>
+        </div>
+        <div>
+          <h3 className="font-headline text-lg font-semibold mb-4">Navegación</h3>
+          <ul className="space-y-2">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-headline text-lg font-semibold mb-4">Contacto Directo</h3>
+          <ul className="space-y-3 text-sm">
+            <li className="flex items-center gap-3">
+              <Mail className="w-4 h-4 text-accent" />
+              <a href="mailto:info@confia.es" className="text-muted-foreground hover:text-primary transition-colors">info@confia.es</a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone className="w-4 h-4 text-accent" />
+              <a href="tel:+34910123456" className="text-muted-foreground hover:text-primary transition-colors">+34 910 123 456</a>
+            </li>
+            <li className="flex items-start gap-3">
+              <MapPin className="w-4 h-4 text-accent mt-1" />
+              <span className="text-muted-foreground">Calle de la Confianza, 123<br/>28001 Madrid, España</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-headline text-lg font-semibold mb-4">Legal</h3>
+          <ul className="space-y-2">
+            <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Aviso Legal</Link></li>
+            <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Política de Privacidad</Link></li>
+            <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Política de Cookies</Link></li>
+          </ul>
+        </div>
+      </div>
+      <div className="container py-6 border-t">
+        <p className="text-center text-sm text-muted-foreground">
+          &copy; {new Date().getFullYear()} CONFÍA Agencia de Seguros. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

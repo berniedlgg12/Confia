@@ -1,0 +1,60 @@
+import { Mail, Phone, MapPin } from 'lucide-react';
+import ContactForm from '@/components/pages/contact/ContactForm';
+
+const ContactPage = () => {
+  return (
+    <>
+      <div className="bg-background">
+        <div className="container mx-auto text-center py-16 sm:py-24">
+          <h1 className="font-headline text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
+            Contacte con Nosotros
+          </h1>
+          <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
+            Estamos aquí para ayudarle. Rellene el formulario o utilice nuestros datos de contacto directo para una consulta sin compromiso.
+          </p>
+        </div>
+      </div>
+      <div className="container mx-auto pb-16 sm:pb-24">
+        <div className="grid lg:grid-cols-5 gap-12">
+          <div className="lg:col-span-3">
+            <ContactForm />
+          </div>
+          <div className="lg:col-span-2 bg-secondary p-8 rounded-lg">
+            <h3 className="font-headline text-2xl font-semibold mb-6 text-primary">Información de Contacto</h3>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="bg-accent/10 p-3 rounded-full">
+                  <Mail className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary">Email</h4>
+                  <a href="mailto:info@confia.es" className="text-muted-foreground hover:text-primary transition-colors">info@confia.es</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="bg-accent/10 p-3 rounded-full">
+                  <Phone className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary">Teléfono</h4>
+                  <a href="tel:+34910123456" className="text-muted-foreground hover:text-primary transition-colors">+34 910 123 456</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="bg-accent/10 p-3 rounded-full">
+                  <MapPin className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-primary">Oficina</h4>
+                  <p className="text-muted-foreground">Calle de la Confianza, 123<br />28001 Madrid, España</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ContactPage;
