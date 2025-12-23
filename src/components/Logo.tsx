@@ -9,9 +9,9 @@ const Logo = ({ className }: { className?: string }) => {
       <Image 
         src="/Logo/logotipo-usos-01.svg" 
         alt="CONFÍA Logo"
-        width={180}
-        height={50}
-        className="h-12 w-auto"
+        width={360}
+        height={100}
+        className="h-24 w-auto"
       />
     </Link>
   );
