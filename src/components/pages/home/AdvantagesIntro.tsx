@@ -16,8 +16,8 @@ const AdvantagesIntro = () => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-base font-semibold leading-7 text-primary font-headline">La Alternativa Inteligente</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl font-headline">
+            <h2 className="text-base font-semibold leading-7 text-white font-headline">La Alternativa Inteligente</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
               Optimice la salud financiera de su empresa
             </p>
             <p className="mt-6 text-lg text-white/80">
