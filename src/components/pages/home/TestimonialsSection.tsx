@@ -8,7 +8,6 @@ import {
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import TestimonialGenerator from './TestimonialGenerator';
 
 const testimonials = [
   {
@@ -38,62 +37,57 @@ const TestimonialsSection = () => {
   return (
     <section className="py-16 sm:py-24 bg-secondary">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-5 lg:gap-16 items-center">
-            <div className="lg:col-span-2 text-center lg:text-left mb-12 lg:mb-0">
-                <h2 className="text-base font-semibold leading-7 text-accent font-headline">Nunca fallamos al Protegido</h2>
-                <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-                    Lo que dicen nuestros clientes
-                </p>
-                <p className="mt-4 text-lg text-muted-foreground">
-                    Nuestra mayor satisfacción es el éxito y la tranquilidad de las empresas que confían en nosotros.
-                </p>
-                
-                <Carousel
-                opts={{
-                    align: "start",
-                    loop: true,
-                }}
-                className="w-full mt-8"
-                >
-                <CarouselContent>
-                    {testimonials.map((testimonial, index) => (
-                    <CarouselItem key={index}>
-                        <Card className="border-none shadow-none bg-transparent">
-                        <CardContent className="flex flex-col items-center lg:items-start text-center lg:text-left p-0">
-                            <p className="text-lg font-medium text-primary">&ldquo;{testimonial.intro}&rdquo;</p>
-                            <blockquote className="mt-4 text-muted-foreground border-l-2 border-accent pl-4 italic">
-                            {testimonial.text}
-                            </blockquote>
-                            <div className="mt-6 flex items-center gap-4">
-                            {testimonial.image && (
-                                <Image
-                                src={testimonial.image.imageUrl}
-                                alt={`Foto de ${testimonial.name}`}
-                                width={56}
-                                height={56}
-                                className="rounded-full object-cover"
-                                data-ai-hint={testimonial.image.imageHint}
-                                />
-                            )}
-                            <div>
-                                <p className="font-semibold text-primary">{testimonial.name}</p>
-                                <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                            </div>
-                            </div>
-                        </CardContent>
-                        </Card>
-                    </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <div className="hidden lg:block mt-4">
-                    <CarouselPrevious />
-                    <CarouselNext />
-                </div>
-                </Carousel>
-            </div>
-            <div className="lg:col-span-3">
-                <TestimonialGenerator />
-            </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-base font-semibold leading-7 text-accent font-headline">Nunca fallamos al Protegido</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
+              Lo que dicen nuestros clientes
+          </p>
+          <p className="mt-4 text-lg text-muted-foreground">
+              Nuestra mayor satisfacción es el éxito y la tranquilidad de las empresas que confían en nosotros.
+          </p>
+          
+          <Carousel
+          opts={{
+              align: "start",
+              loop: true,
+          }}
+          className="w-full mt-8"
+          >
+          <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index}>
+                  <Card className="border-none shadow-none bg-transparent">
+                  <CardContent className="flex flex-col items-center text-center p-0">
+                      <p className="text-lg font-medium text-primary">&ldquo;{testimonial.intro}&rdquo;</p>
+                      <blockquote className="mt-4 text-muted-foreground border-l-2 border-accent pl-4 italic">
+                      {testimonial.text}
+                      </blockquote>
+                      <div className="mt-6 flex items-center gap-4">
+                      {testimonial.image && (
+                          <Image
+                          src={testimonial.image.imageUrl}
+                          alt={`Foto de ${testimonial.name}`}
+                          width={56}
+                          height={56}
+                          className="rounded-full object-cover"
+                          data-ai-hint={testimonial.image.imageHint}
+                          />
+                      )}
+                      <div>
+                          <p className="font-semibold text-primary">{testimonial.name}</p>
+                          <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                      </div>
+                      </div>
+                  </CardContent>
+                  </Card>
+              </CarouselItem>
+              ))}
+          </CarouselContent>
+          <div className="mt-4">
+              <CarouselPrevious />
+              <CarouselNext />
+          </div>
+          </Carousel>
         </div>
       </div>
     </section>
