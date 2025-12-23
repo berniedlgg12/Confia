@@ -15,9 +15,8 @@ const Logo = ({ className }: { className?: string }) => {
       <Image 
         src="/logo.svg" 
         alt="CONFÍA Logo" 
-        width={28} 
-        height={28} 
-        className="text-accent"
+        width={32} 
+        height={32} 
       />
       <span className="mt-1">CONFÍA</span>
     </Link>
