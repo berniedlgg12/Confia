@@ -4,7 +4,7 @@ import CtaSection from "@/components/pages/shared/CtaSection";
 const AboutPage = () => {
   return (
     <>
-      <div className="bg-secondary py-24 sm:py-32">
+      <div className="bg-transparent py-24 sm:py-32">
         <div className="container mx-auto text-center">
             <h1 className="font-headline text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
               Somos sus Asesores de Confianza
@@ -51,7 +51,7 @@ const AboutPage = () => {
         <div className="mt-24 bg-primary text-primary-foreground rounded-lg p-12 relative overflow-hidden flex items-center justify-center">
             <Quote className="absolute -top-4 -left-4 w-24 h-24 text-accent/20" />
             <blockquote className="text-center text-3xl font-medium leading-9 relative">
-                <p>&ldquo;Nunca fallamos al <span className="line-through">protegido</span>, PROTEGIDO.&rdquo;</p>
+                <p>&ldquo;Nunca fallarle al <span className="line-through">cliente</span>, PROTEGIDO.&rdquo;</p>
             </blockquote>
         </div>
       </div>
