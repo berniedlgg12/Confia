@@ -6,11 +6,12 @@ const Logo = ({ className }: { className?: string }) => {
   return (
     <Link href="/" className={cn("flex items-center gap-2 text-xl font-bold font-headline text-primary", className)}>
       {/* 
-        Asegúrate de que tu logo se llama 'logotipo-usos-01.svg' 
-        y está en la carpeta 'public'.
+        This is a temporary test using an online SVG. 
+        If you see this logo, it means the issue is with your local file name or location.
+        Please ensure your logo is named 'logotipo-usos-01.svg' and is in the 'public' folder.
       */}
       <img 
-        src="/logotipo-usos-01.svg" 
+        src="https://www.svgrepo.com/show/530599/adobe.svg" 
         alt="CONFÍA Logo" 
         style={{ height: '32px', width: 'auto' }}
       />
