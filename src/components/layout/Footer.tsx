@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin } from 'lucide-react';
 import Logo from '@/components/Logo';
 import { NAV_LINKS } from '@/lib/constants';
 
@@ -39,6 +39,14 @@ const Footer = () => {
             <li className="flex items-start gap-3">
               <MapPin className="w-4 h-4 text-accent mt-1" />
               <span className="text-muted-foreground">Calle de la Confianza, 123<br/>28001 Madrid, España</span>
+            </li>
+             <li className="flex items-center gap-3">
+                <Instagram className="w-4 h-4 text-accent" />
+                <a href="https://www.instagram.com/confiax.es" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Instagram</a>
+            </li>
+            <li className="flex items-center gap-3">
+                <Linkedin className="w-4 h-4 text-accent" />
+                <a href="https://linkedin.com/company/confiax-agencia-de-seguros" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</a>
             </li>
           </ul>
         </div>
