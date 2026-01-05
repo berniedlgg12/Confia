@@ -26,7 +26,7 @@ const ServicesSnapshot = () => {
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
             Cobertura Integral para Contratistas
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-white">
             Ofrecemos un portfolio de soluciones enfocado en las necesidades específicas de las empresas del sector de la construcción y servicios.
           </p>
         </div>
