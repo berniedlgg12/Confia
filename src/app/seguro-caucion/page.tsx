@@ -11,7 +11,7 @@ const figures = [
 const SuretyBondPage = () => {
   return (
     <>
-      <div className="bg-secondary">
+      <div className="bg-transparent">
         <div className="container mx-auto text-center py-16 sm:py-24">
           <h1 className="font-headline text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
             ¿Qué es el Seguro de Caución?
