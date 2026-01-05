@@ -55,13 +55,14 @@ const Footer = () => {
           <ul className="space-y-2">
             <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Aviso Legal</Link></li>
             <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Política de Privacidad</Link></li>
-            <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Política de Cookies</Link></li>
+            <li><Link href="#" className="text-sm text-muted-foreground hover-text-primary transition-colors">Política de Cookies</Link></li>
+            <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Atención al Cliente</Link></li>
           </ul>
         </div>
       </div>
       <div className="container py-6 border-t">
         <p className="text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} CONFÍA Agencia de Seguros. Todos los derechos reservados.
+          &copy; {new Date().getFullYear()} CONFÍA Agencia de Seguro S.L. Todos los derechos reservados.
         </p>
       </div>
     </footer>
