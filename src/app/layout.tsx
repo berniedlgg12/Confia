@@ -41,7 +41,7 @@ export default function RootLayout({
           }}
         ></div>
         <div className="fixed inset-0 -z-10 h-full w-full overflow-hidden">
-            <div className="absolute -right-32 -top-32 h-1/2 w-1/2 opacity-10 transform rotate-45">
+            <div className="absolute -right-32 -top-24 h-2/3 w-2/3 opacity-10 transform rotate-45">
                 <Image
                     src="/Logo/logotipo-usos-08.png"
                     alt="Confía Logo Watermark"
