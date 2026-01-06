@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ScanSearch, Rocket, Send } from 'lucide-react';
-import Image from 'next/image';
 
 const steps = [
   {
@@ -25,33 +24,31 @@ const steps = [
 const HowItWorks = () => {
   return (
     <section id="como-trabajamos" className="py-16 sm:py-24 bg-transparent">
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="lg:col-start-2">
-            <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              La Alternativa Inteligente
-            </h2>
-            <p className="mt-4 text-lg text-primary-foreground">
-              Optimice la salud financiera de su empresa.
-            </p>
-            <div className="mt-10 space-y-8">
-              {steps.map((step, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent/10">
-                    {step.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-primary">{step.name}</h3>
-                    <p className="mt-1 text-primary-foreground">{step.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <Button asChild className="mt-10">
-              <Link href="/contacto">Empezar ahora</Link>
-            </Button>
-          </div>
+      <div className="container mx-auto flex flex-col items-center">
+        <div className="max-w-xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+            La Alternativa Inteligente
+          </h2>
+          <p className="mt-4 text-lg text-primary-foreground">
+            Optimice la salud financiera de su empresa.
+          </p>
         </div>
+        <div className="mt-10 space-y-8 max-w-xl w-full">
+          {steps.map((step, index) => (
+            <div key={index} className="flex items-start gap-4">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent/10">
+                {step.icon}
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-primary">{step.name}</h3>
+                <p className="mt-1 text-primary-foreground">{step.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <Button asChild className="mt-10">
+          <Link href="/contacto">Empezar ahora</Link>
+        </Button>
       </div>
     </section>
   );
