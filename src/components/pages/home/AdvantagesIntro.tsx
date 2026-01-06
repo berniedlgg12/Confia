@@ -3,21 +3,20 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ScanSearch, Rocket, Send } from 'lucide-react';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const steps = [
   {
-    icon: <ScanSearch className="h-8 w-8 text-accent" />,
+    icon: <ScanSearch className="h-8 w-8 text-primary-foreground" />,
     name: '1. Revisión',
     description: 'Contactas con nosotros, analizamos tu necesidad y la documentación de forma gratuita.',
   },
   {
-    icon: <Rocket className="h-8 w-8 text-accent" />,
+    icon: <Rocket className="h-8 w-8 text-primary-foreground" />,
     name: '2. Estudio',
     description: 'Aserta, la aseguradora, realiza el estudio de viabilidad sin coste para ofrecerte las mejores condiciones.',
   },
   {
-    icon: <Send className="h-8 w-8 text-accent" />,
+    icon: <Send className="h-8 w-8 text-primary-foreground" />,
     name: '3. Emisión',
     description: 'Una vez aprobada, se emite la póliza de caución y recibes tu garantía lista para presentar.',
   },
@@ -32,7 +31,7 @@ const HowItWorks = () => {
             <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
               La Alternativa Inteligente
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-lg text-primary-foreground">
               Optimice la salud financiera de su empresa.
             </p>
             <div className="mt-10 space-y-8">
@@ -43,7 +42,7 @@ const HowItWorks = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-primary">{step.name}</h3>
-                    <p className="mt-1 text-muted-foreground">{step.description}</p>
+                    <p className="mt-1 text-primary-foreground">{step.description}</p>
                   </div>
                 </div>
               ))}

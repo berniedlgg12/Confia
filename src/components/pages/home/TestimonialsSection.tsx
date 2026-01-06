@@ -9,7 +9,6 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const testimonials = [
   {
@@ -31,13 +30,13 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-transparent py-16 sm:py-24">
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Nunca fallamos al Protegido
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-primary-foreground">
               Nuestra mayor satisfacción es el éxito y la tranquilidad de las empresas que confían en nosotros.
           </p>
           
@@ -59,7 +58,7 @@ const TestimonialsSection = () => {
                       <div className="mt-6 flex items-center gap-4">
                       <div>
                           <p className="font-semibold text-primary">{testimonial.name}</p>
-                          <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                          <p className="text-sm text-primary-foreground">{testimonial.title}</p>
                       </div>
                       </div>
                   </CardContent>
