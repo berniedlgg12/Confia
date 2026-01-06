@@ -98,30 +98,27 @@ const SolutionsPage = () => {
         <div className="container mx-auto py-16 sm:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution) => (
-              <Card key={solution.id} id={solution.id} className="bg-card shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col border">
-                <CardHeader>
-                  <div className="flex items-start gap-4">
-                    <solution.icon className="w-10 h-10 text-accent flex-shrink-0" />
-                    <CardTitle className="text-xl mt-1">{solution.title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="flex-grow space-y-4">
-                  <p className="text-muted-foreground">{solution.description}</p>
-                   <div>
-                    <h4 className="font-semibold text-sm text-primary">¿Cuándo se pide?</h4>
-                    <p className="text-sm text-muted-foreground">{solution.when}</p>
-                   </div>
-                   <div>
-                    <h4 className="font-semibold text-sm text-primary">Documentación habitual</h4>
-                    <p className="text-sm text-muted-foreground">{solution.docs}</p>
-                   </div>
-                </CardContent>
-                <div className="p-6 pt-2">
-                    <Button asChild className="w-full">
-                        <Link href="/contacto">Solicitar Estudio</Link>
-                    </Button>
-                </div>
-              </Card>
+              <Link href="/contacto" key={solution.id} className="block h-full">
+                <Card id={solution.id} className="bg-card shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col border h-full">
+                  <CardHeader>
+                    <div className="flex items-start gap-4">
+                      <solution.icon className="w-10 h-10 text-accent flex-shrink-0" />
+                      <CardTitle className="text-xl mt-1">{solution.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="flex-grow space-y-4">
+                    <p className="text-muted-foreground">{solution.description}</p>
+                    <div>
+                      <h4 className="font-semibold text-sm text-primary">¿Cuándo se pide?</h4>
+                      <p className="text-sm text-muted-foreground">{solution.when}</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-sm text-primary">Documentación habitual</h4>
+                      <p className="text-sm text-muted-foreground">{solution.docs}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
