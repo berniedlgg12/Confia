@@ -84,7 +84,7 @@ const SuretyBondPage = () => {
                 <div key={advantage.title} className="flex items-start gap-4">
                     <div className="flex-shrink-0 bg-accent/10 p-3 rounded-full">{advantage.icon}</div>
                     <div>
-                      <h3 className="font-semibold text-primary-foreground text-lg">{advantage.title}</h3>
+                      <h3 className="font-semibold text-primary text-lg">{advantage.title}</h3>
                       <p className="text-primary-foreground">{advantage.description}</p>
                     </div>
                 </div>
