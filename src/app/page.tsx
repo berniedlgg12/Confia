@@ -4,16 +4,27 @@ import ServicesSnapshot from '@/components/pages/home/ServicesSnapshot';
 import HowItWorks from '@/components/pages/home/AdvantagesIntro';
 import TestimonialsSection from '@/components/pages/home/TestimonialsSection';
 import CtaSection from '@/components/pages/shared/CtaSection';
+import AnimatedOnScroll from '@/components/AnimatedOnScroll';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <ValueProposition />
-      <ServicesSnapshot />
-      <HowItWorks />
-      <TestimonialsSection />
-      <CtaSection />
+      <AnimatedOnScroll>
+        <ValueProposition />
+      </AnimatedOnScroll>
+      <AnimatedOnScroll>
+        <ServicesSnapshot />
+      </AnimatedOnScroll>
+      <AnimatedOnScroll>
+        <HowItWorks />
+      </AnimatedOnScroll>
+      <AnimatedOnScroll>
+        <TestimonialsSection />
+      </AnimatedOnScroll>
+      <AnimatedOnScroll>
+        <CtaSection />
+      </AnimatedOnScroll>
     </>
   );
 }
