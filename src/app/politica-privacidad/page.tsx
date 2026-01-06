@@ -1,4 +1,6 @@
+
 import AnimatedOnScroll from '@/components/AnimatedOnScroll';
+import Link from 'next/link';
 
 const PrivacyPolicyPage = () => {
   return (
@@ -9,72 +11,109 @@ const PrivacyPolicyPage = () => {
             <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
               Política de Privacidad
             </h1>
-            <p className="mt-4 text-muted-foreground">Última actualización: 6 de enero 2026</p>
+            <p className="mt-4 text-muted-foreground">Última actualización: 6 de enero de 2026</p>
           </header>
 
           <div className="max-w-4xl mx-auto prose prose-lg text-primary-foreground space-y-6">
             <p>
-              En CONFÍA Agencia de Seguro S.L. (“Confía”, “nosotros”), con domicilio en Calle Ferraz 2, 2° izquierda, 28008 Madrid, y C.I.F. B-12345678, nos comprometemos a proteger y respetar su privacidad. Esta política establece cómo tratamos cualquier dato personal que recopilamos de usted o que usted nos proporciona.
+              En cumplimiento de lo dispuesto en el Reglamento (UE) 2016/679, General de Protección de Datos (RGPD), y en la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD), se informa a los usuarios de la presente Política de Privacidad.
             </p>
 
-            <h2 className="text-2xl font-bold text-primary">1. Responsable del Tratamiento</h2>
-            <p>
-              El responsable del tratamiento de sus datos personales es CONFÍA Agencia de Seguro S.L., con los datos de contacto proporcionados anteriormente. Puede contactarnos por correo electrónico en <a href="mailto:bdlg@confiax.es" className="text-primary hover:underline">bdlg@confiax.es</a>.
-            </p>
+            <h2 className="text-2xl font-bold text-primary">1. Responsable del tratamiento</h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Responsable:</strong> CONFÍA AGENCIA DE SEGUROS, S.L.</li>
+              <li><strong>CIF:</strong> B87557825</li>
+              <li><strong>Domicilio social:</strong> Calle Ferraz 2, 2º izquierda, 28008 Madrid (España)</li>
+              <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:bdlg@confiax.es" className="text-primary hover:underline">bdlg@confiax.es</a></li>
+              <li><strong>Teléfono:</strong> +34 643 633 288</li>
+              <li><strong>Dominio web:</strong> <a href="https://confiax.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://confiax.es</a></li>
+            </ul>
 
-            <h2 className="text-2xl font-bold text-primary">2. Información que recopilamos</h2>
+            <h2 className="text-2xl font-bold text-primary">2. Datos personales que se recogen</h2>
             <p>
-              Recopilamos y tratamos los siguientes datos sobre usted:
+              A través del sitio web se pueden recoger los siguientes datos personales:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>
-                <strong>Información que usted nos facilita:</strong> Es la información que nos proporciona al rellenar formularios en nuestro sitio web www.confiax.es, como el formulario de contacto. Incluye su nombre, empresa, CIF/NIF, correo electrónico, teléfono y cualquier otra información que nos proporcione en su mensaje.
-              </li>
-              <li>
-                <strong>Información que recopilamos automáticamente:</strong> A través de cookies y tecnologías similares, podemos recopilar información técnica sobre su dispositivo, como la dirección IP, el tipo de navegador, el sistema operativo y las páginas que visita en nuestro sitio.
-              </li>
+              <li>Datos identificativos: nombre y apellidos, razón social.</li>
+              <li>Datos de contacto: correo electrónico, teléfono.</li>
+              <li>Datos profesionales y empresariales: CIF/NIF, tipo de actividad, información relacionada con la solicitud de seguros de caución.</li>
+              <li>Cualquier otra información que el usuario facilite voluntariamente a través de los formularios o canales de contacto.</li>
             </ul>
+            <p>CONFÍA AGENCIA DE SEGUROS, S.L. no recoge datos especialmente protegidos a través del sitio web.</p>
 
             <h2 className="text-2xl font-bold text-primary">3. Finalidad del tratamiento</h2>
             <p>
-              Utilizamos la información que tenemos sobre usted para los siguientes fines:
+              Los datos personales facilitados por los usuarios serán tratados con las siguientes finalidades:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Para gestionar su solicitud de estudio y ponernos en contacto con usted para ofrecerle el asesoramiento solicitado.</li>
-              <li>Para cumplir con nuestras obligaciones legales y contractuales.</li>
-              <li>Para mejorar nuestro sitio web y garantizar que el contenido se presente de la manera más efectiva para usted y para su dispositivo.</li>
-              <li>Para enviarle comunicaciones comerciales, siempre que tengamos su consentimiento explícito.</li>
+              <li>Gestionar solicitudes de información y contacto.</li>
+              <li>Realizar estudios de riesgo y análisis preliminares relacionados con seguros de caución.</li>
+              <li>Mantener comunicaciones comerciales relacionadas con los servicios solicitados.</li>
+              <li>Cumplir con las obligaciones legales aplicables al mediador de seguros.</li>
             </ul>
-            
-            <h2 className="text-2xl font-bold text-primary">4. Base Jurídica para el Tratamiento</h2>
-             <p>
-              La base legal para el tratamiento de sus datos es:
+            <p>En ningún caso se utilizarán los datos para finalidades distintas sin informar previamente al usuario.</p>
+
+            <h2 className="text-2xl font-bold text-primary">4. Legitimación del tratamiento</h2>
+            <p>
+              La base legal para el tratamiento de los datos es:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>El <strong>consentimiento</strong> que nos otorga al aceptar esta política y marcar la casilla correspondiente en nuestros formularios.</li>
-              <li>La necesidad de ejecutar <strong>medidas precontractuales</strong> a petición suya, como la elaboración de un estudio para un seguro de caución.</li>
-              <li>El cumplimiento de nuestras <strong>obligaciones legales</strong>.</li>
+              <li>El <strong>consentimiento expreso del usuario</strong>, otorgado al marcar las casillas correspondientes en los formularios.</li>
+              <li>La <strong>aplicación de medidas precontractuales</strong> solicitadas por el propio interesado.</li>
+              <li>El <strong>cumplimiento de obligaciones legales</strong> aplicables a la actividad de mediación de seguros.</li>
             </ul>
 
-
-            <h2 className="text-2xl font-bold text-primary">5. Conservación de los Datos</h2>
+            <h2 className="text-2xl font-bold text-primary">5. Conservación de los datos</h2>
             <p>
-              Conservaremos sus datos personales durante el tiempo necesario para cumplir con la finalidad para la que fueron recabados y para determinar las posibles responsabilidades que se pudieran derivar de dicha finalidad y del tratamiento de los datos.
+              Los datos personales se conservarán:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Durante el tiempo necesario para atender la solicitud del usuario.</li>
+              <li>Mientras exista una relación comercial o de interés.</li>
+              <li>Durante los plazos legalmente exigidos para el cumplimiento de obligaciones legales.</li>
+            </ul>
+            <p>Una vez finalizados dichos plazos, los datos serán eliminados de forma segura.</p>
+
+            <h2 className="text-2xl font-bold text-primary">6. Destinatarios de los datos</h2>
+            <p>
+              Los datos personales no se cederán a terceros, salvo obligación legal o cuando sea necesario para la correcta gestión de la solicitud.
+            </p>
+            <p>
+              En el marco de la actividad de mediación, los datos podrán ser comunicados a la entidad aseguradora <strong>Aserta Europa, Seguros y Reaseguros, S.A.U.</strong>, exclusivamente cuando resulte necesario para el análisis o tramitación del seguro solicitado.
             </p>
 
-            <h2 className="text-2xl font-bold text-primary">6. Cesión de Datos a Terceros</h2>
+            <h2 className="text-2xl font-bold text-primary">7. Derechos de los usuarios</h2>
             <p>
-              Sus datos personales podrán ser cedidos a la compañía aseguradora Aserta Aseguradora S.A.U. con la única finalidad de realizar el estudio de viabilidad y, en su caso, emitir la póliza de seguro de caución solicitada. No cederemos sus datos a otros terceros, salvo que estemos obligados por ley.
+              El usuario puede ejercer en cualquier momento los siguientes derechos:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Acceso a sus datos personales.</li>
+              <li>Rectificación de los datos inexactos.</li>
+              <li>Supresión de los datos cuando ya no sean necesarios.</li>
+              <li>Limitación del tratamiento.</li>
+              <li>Oposición al tratamiento.</li>
+              <li>Portabilidad de los datos, cuando proceda.</li>
+            </ul>
+            <p>
+              Para ejercer estos derechos, el usuario puede enviar una solicitud acompañada de copia de su documento identificativo al correo electrónico <a href="mailto:bdlg@confiax.es" className="text-primary hover:underline">bdlg@confiax.es</a>.
+            </p>
+            <p>
+              Asimismo, el usuario tiene derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong> si considera que el tratamiento de sus datos no se ajusta a la normativa vigente.
             </p>
 
-            <h2 className="text-2xl font-bold text-primary">7. Sus Derechos</h2>
+            <h2 className="text-2xl font-bold text-primary">8. Seguridad de los datos</h2>
             <p>
-              Usted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos, como se explica en la información adicional. Puede ejercer sus derechos enviando un correo electrónico a <a href="mailto:bdlg@confiax.es" className="text-primary hover:underline">bdlg@confiax.es</a>, adjuntando una copia de su DNI. También tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).
+              CONFÍA AGENCIA DE SEGUROS, S.L. adopta las medidas técnicas y organizativas necesarias para garantizar la seguridad, integridad y confidencialidad de los datos personales, evitando su alteración, pérdida, tratamiento o acceso no autorizado.
             </p>
 
-            <h2 className="text-2xl font-bold text-primary">8. Cambios en Nuestra Política de Privacidad</h2>
+            <h2 className="text-2xl font-bold text-primary">9. Veracidad de los datos</h2>
             <p>
-              Cualquier cambio que realicemos en nuestra política de privacidad en el futuro se publicará en esta página. Le recomendamos que la revise con frecuencia para estar informado de cualquier actualización.
+              El usuario garantiza que los datos facilitados son veraces, exactos y actualizados, y se compromete a comunicar cualquier modificación de los mismos.
+            </p>
+
+            <h2 className="text-2xl font-bold text-primary">10. Cambios en la Política de Privacidad</h2>
+            <p>
+              CONFÍA AGENCIA DE SEGUROS, S.L. se reserva el derecho a modificar la presente Política de Privacidad para adaptarla a novedades legislativas o jurisprudenciales. Se recomienda al usuario revisar periódicamente esta política.
             </p>
           </div>
         </div>
@@ -84,3 +123,5 @@ const PrivacyPolicyPage = () => {
 };
 
 export default PrivacyPolicyPage;
+
+    
