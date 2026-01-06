@@ -20,15 +20,15 @@
     },
     {
       "id": "about-office",
-      "description": "Modern and clean office interior",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzY2NDAyNjIzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern office"
+      "description": "Modern and clean office interior with a red accent wall",
+      "imageUrl": "https://images.unsplash.com/photo-1554673419-231a236de865?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjByZWQlMjBhY2NlbnR8ZW58MHx8fHwxNzgyMzAxMzMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern office red"
     },
     {
       "id": "about-team",
-      "description": "A diverse and professional business team in a meeting",
-      "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHRlYW18ZW58MHx8fHwxNzgwMjgwMDUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "business team"
+      "description": "A diverse and professional business team in a meeting with abstract red shapes",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBtb2Rlcm58ZW58MHx8fHwxNzgyMzAxNTIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business team modern"
     }
   ]
 }

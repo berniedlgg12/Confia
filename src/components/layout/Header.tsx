@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu } from 'lucide-react';
-import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 import { Button } from '@/components/ui/button';
 import Logo from '@/components/Logo';
@@ -13,32 +13,46 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
+  SheetClose,
 } from "@/components/ui/sheet"
-
 
 const Header = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
+    <header className={cn(
+      "sticky top-0 z-50 w-full transition-all duration-300",
+      isScrolled ? "border-b bg-background/80 backdrop-blur-sm" : "bg-transparent border-b border-transparent"
+    )}>
+      <div className="container flex h-20 items-center">
         <Logo />
-        <nav className="hidden md:flex md:ml-auto md:items-center md:gap-6">
+        <nav className="hidden md:flex md:ml-auto md:items-center md:gap-8">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-primary',
+                'text-sm font-medium transition-colors hover:text-primary/80',
                 pathname === link.href ? 'text-primary' : 'text-muted-foreground'
               )}
             >
               {link.label}
             </Link>
           ))}
-          <Button asChild>
-            <Link href="/contacto">Solicitar Asesoría</Link>
+          <Button asChild size="sm">
+            <Link href="/contacto">Solicitar Estudio</Link>
           </Button>
         </nav>
         <div className="ml-auto md:hidden">
@@ -49,19 +63,24 @@ const Header = () => {
                   <span className="sr-only">Abrir menú</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <div className="p-4">
-                  <div className="flex justify-between items-center mb-8">
+              <SheetContent side="right" className="w-full bg-background p-0">
+                  <div className="flex justify-between items-center p-4 border-b">
                      <Logo />
+                     <SheetClose asChild>
+                       <Button variant="ghost" size="icon">
+                          <X className="h-6 w-6" />
+                          <span className="sr-only">Cerrar menú</span>
+                       </Button>
+                     </SheetClose>
                   </div>
-                  <div className="flex flex-col gap-6">
+                  <div className="p-6 flex flex-col gap-6">
                     {NAV_LINKS.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={cn(
-                          'text-lg font-medium transition-colors hover:text-primary',
+                          'text-lg font-medium transition-colors hover:text-primary/80',
                           pathname === link.href ? 'text-primary' : 'text-muted-foreground'
                         )}
                       >
@@ -69,10 +88,9 @@ const Header = () => {
                       </Link>
                     ))}
                     <Button asChild size="lg" className="mt-4">
-                      <Link href="/contacto" onClick={() => setIsMobileMenuOpen(false)}>Solicitar Asesoría</Link>
+                      <Link href="/contacto" onClick={() => setIsMobileMenuOpen(false)}>Solicitar Estudio</Link>
                     </Button>
                   </div>
-                </div>
               </SheetContent>
             </Sheet>
         </div>

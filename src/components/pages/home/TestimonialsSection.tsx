@@ -11,22 +11,19 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const testimonials = [
   {
-    intro: "Para G-Construct, la agilidad en la obtención de garantías para licitaciones es crucial. CONFÍA nos ha proporcionado una solución rápida y sin el consumo de recursos que suponían los avales bancarios.",
-    text: "El cambio a los seguros de caución con CONFÍA ha sido un antes y un después. Ahora podemos presentarnos a más concursos sin preocuparnos por el impacto en nuestras líneas de crédito. Su equipo es increíblemente profesional y eficiente.",
+    text: "El cambio a los seguros de caución con Confía ha sido un antes y un después. Ahora podemos presentarnos a más concursos sin preocuparnos por el impacto en nuestras líneas de crédito. Su equipo es increíblemente profesional y eficiente.",
     name: 'Javier García',
     title: 'Director de Contratación, G-Construct',
     image: PlaceHolderImages.find(p => p.id === 'testimonial-1'),
   },
   {
-    intro: "Promociones Urbanas S.L. ha encontrado en el seguro de caución de CONFÍA la herramienta perfecta para garantizar las entregas a cuenta de sus promociones, generando confianza en sus compradores finales.",
-    text: "Necesitábamos una solución para las cantidades entregadas a cuenta que no afectara nuestra financiación para la construcción. CONFÍA entendió perfectamente nuestras necesidades y nos ofreció una póliza de caución que nos ha dado una flexibilidad enorme.",
+    text: "Necesitábamos una solución para las cantidades entregadas a cuenta que no afectara nuestra financiación. Confía entendió nuestras necesidades y nos ofreció una póliza de caución de Aserta que nos ha dado una flexibilidad enorme.",
     name: 'Laura Méndez',
     title: 'CEO, Promociones Urbanas S.L.',
     image: PlaceHolderImages.find(p => p.id === 'testimonial-2'),
   },
     {
-    intro: "Gracias a la gestión de CONFÍA, en Infraestructuras Globales hemos optimizado la gestión de nuestras garantías de buena ejecución, mejorando la eficiencia financiera de nuestros proyectos de obra civil.",
-    text: "Teníamos varias obras en marcha y la gestión de avales bancarios era un quebradero de cabeza. El equipo de CONFÍA nos asesoró y consolidamos todas nuestras garantías bajo seguros de caución. El ahorro en costes y tiempo ha sido notable.",
+    text: "Teníamos varias obras en marcha y la gestión de avales bancarios era un quebradero de cabeza. El equipo de Confía nos asesoró y consolidamos todas nuestras garantías bajo seguros de caución de Aserta. El ahorro en costes y tiempo ha sido notable.",
     name: 'Carlos Jiménez',
     title: 'Jefe de Obra, Infraestructuras Globales',
     image: PlaceHolderImages.find(p => p.id === 'testimonial-3'),
@@ -35,14 +32,13 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="bg-background/0 py-16 sm:py-24">
+    <section className="bg-secondary/50 py-16 sm:py-24">
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-base font-semibold leading-7 text-white font-headline">Nunca fallamos al Protegido</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
               Lo que dicen nuestros protegidos
-          </p>
-          <p className="mt-4 text-lg text-white">
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
               Nuestra mayor satisfacción es el éxito y la tranquilidad de las empresas que confían en nosotros.
           </p>
           
@@ -51,16 +47,15 @@ const TestimonialsSection = () => {
               align: "start",
               loop: true,
           }}
-          className="w-full mt-8"
+          className="w-full mt-12"
           >
           <CarouselContent>
               {testimonials.map((testimonial, index) => (
               <CarouselItem key={index}>
                   <Card className="border-none shadow-none bg-transparent">
                   <CardContent className="flex flex-col items-center text-center p-0">
-                      <p className="text-lg font-medium text-white">&ldquo;{testimonial.intro}&rdquo;</p>
-                      <blockquote className="mt-4 text-white border-l-2 border-accent pl-4 italic">
-                      {testimonial.text}
+                      <blockquote className="max-w-2xl text-xl font-medium text-primary">
+                      &ldquo;{testimonial.text}&rdquo;
                       </blockquote>
                       <div className="mt-6 flex items-center gap-4">
                       {testimonial.image && (
@@ -83,9 +78,9 @@ const TestimonialsSection = () => {
               </CarouselItem>
               ))}
           </CarouselContent>
-          <div className="mt-4">
-              <CarouselPrevious />
-              <CarouselNext />
+          <div className="mt-6">
+              <CarouselPrevious className="static transform-none" />
+              <CarouselNext className="static transform-none" />
           </div>
           </Carousel>
         </div>

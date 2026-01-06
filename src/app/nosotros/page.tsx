@@ -1,50 +1,68 @@
 import { Quote, Shield, Target, Eye } from 'lucide-react';
 import CtaSection from "@/components/pages/shared/CtaSection";
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const AboutPage = () => {
+  const teamImage = PlaceHolderImages.find(p => p.id === 'about-team');
+
   return (
     <>
-      <div className="bg-transparent py-24 sm:py-32">
+      <div className="bg-secondary/50 py-24 sm:py-32">
         <div className="container mx-auto text-center">
-            <h1 className="font-headline text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
-              Somos sus Asesores de Confianza
+            <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
+              Socios en tu crecimiento
             </h1>
             <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
-              Nacimos para ser la agencia de seguros más eficiente de España, generando soluciones simples para nuestros protegidos.
+              Nacimos para ser la agencia de seguros más eficiente de España, generando soluciones simples para nuestros protegidos, con el respaldo de la aseguradora líder.
             </p>
         </div>
       </div>
 
       <div className="container mx-auto py-16 sm:py-24">
-        <div className="max-w-4xl mx-auto">
-            <div className="text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">Nuestra Historia y Filosofía</h2>
-                <div className="mt-6 space-y-4 text-muted-foreground max-w-3xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {teamImage && (
+                <div className="relative aspect-square lg:aspect-auto lg:h-full rounded-lg overflow-hidden order-last lg:order-first">
+                    <Image 
+                        src={teamImage.imageUrl}
+                        alt={teamImage.description}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={teamImage.imageHint}
+                    />
+                </div>
+            )}
+            <div className="max-w-xl">
+                <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">Nuestra Historia y Filosofía</h2>
+                <div className="mt-6 space-y-4 text-muted-foreground">
                     <p>
-                        CONFÍA Agencia de Seguros nació de la visión de un grupo de profesionales con décadas de experiencia en los sectores asegurador y financiero. Observamos una necesidad clara en el mercado: las empresas españolas, especialmente los contratistas, requerían un socio especializado en garantías que comprendiera sus retos y les ofreciera soluciones más allá del rígido sistema bancario.
+                        CONFÍA Agencia de Seguros nació de la visión de un grupo de profesionales con décadas de experiencia en los sectores asegurador y financiero. Observamos una necesidad clara en el mercado: las empresas españolas requerían un socio especializado en garantías que comprendiera sus retos y les ofreciera soluciones más allá del rígido sistema bancario.
                     </p>
                     <p>
-                        Nuestra filosofía se basa en tres pilares: <strong className="text-primary">Verdad</strong>, <strong className="text-primary">Enfoque</strong> y <strong className="text-primary">Simplicidad</strong>. Creemos en las relaciones a largo plazo y en ser asesores estratégicos para nuestros protegidos.
+                       Decidimos crear una agencia de mediación enfocada 100% en el cliente, capaz de ofrecer un <strong className="text-primary">asesoramiento experto y un servicio ágil.</strong> Para ello, nos asociamos con <strong className="text-primary">Aserta</strong>, la compañía aseguradora líder y especialista en seguros de caución, para distribuir sus productos.
+                    </p>
+                    <p>
+                        Esta alianza nos permite combinar la <strong className="text-primary">solidez y capacidad de suscripción de una gran aseguradora</strong> con la <strong className="text-primary">cercanía, flexibilidad y enfoque en el cliente</strong> de una agencia especializada. En Confía no eres un número, eres un protegido.
                     </p>
                 </div>
             </div>
         </div>
 
         <div className="mt-24 grid md:grid-cols-3 gap-8 text-center">
-            <div className="bg-card p-8 rounded-lg shadow-sm">
+            <div className="bg-card p-8 rounded-lg shadow-sm border">
                 <Target className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="text-2xl font-bold font-headline text-primary">Misión</h3>
-                <p className="mt-2 text-muted-foreground">Generar soluciones simples.</p>
+                <h3 className="text-2xl font-bold text-primary">Misión</h3>
+                <p className="mt-2 text-muted-foreground">Generar soluciones simples, mediando con la aseguradora líder para proteger los proyectos de nuestros clientes.</p>
             </div>
-            <div className="bg-card p-8 rounded-lg shadow-sm">
+            <div className="bg-card p-8 rounded-lg shadow-sm border">
                 <Eye className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="text-2xl font-bold font-headline text-primary">Visión</h3>
-                <p className="mt-2 text-muted-foreground">Ser la agencia de seguros más eficiente de España.</p>
+                <h3 className="text-2xl font-bold text-primary">Visión</h3>
+                <p className="mt-2 text-muted-foreground">Ser la agencia de seguros de caución más eficiente y de mayor confianza en España.</p>
             </div>
-            <div className="bg-card p-8 rounded-lg shadow-sm">
+            <div className="bg-card p-8 rounded-lg shadow-sm border">
                 <Shield className="w-12 h-12 text-accent mx-auto mb-4" />
-                <h3 className="text-2xl font-bold font-headline text-primary">Propósito</h3>
-                <p className="mt-2 text-muted-foreground">Proteger los proyectos y el patrimonio de nuestros protegidos.</p>
+                <h3 className="text-2xl font-bold text-primary">Valores</h3>
+                <p className="mt-2 text-muted-foreground">Verdad, Enfoque y Simplicidad. Los pilares que guían cada una de nuestras acciones para protegerle.</p>
             </div>
         </div>
 

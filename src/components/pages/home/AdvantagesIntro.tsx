@@ -1,39 +1,70 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2 } from 'lucide-react';
+import { ScanSearch, Rocket, Send } from 'lucide-react';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const advantages = [
-  'Sin impacto en CIRBE',
-  'No inmoviliza capital ni saldos',
-  'Libera sus líneas de crédito bancarias',
-  'Proceso más rápido y flexible que un aval',
-  'Coste menor y ventajas fiscales'
+const steps = [
+  {
+    icon: <ScanSearch className="h-8 w-8 text-accent" />,
+    name: '1. Revisión',
+    description: 'Contactas con nosotros, analizamos tu necesidad y la documentación de forma gratuita.',
+  },
+  {
+    icon: <Rocket className="h-8 w-8 text-accent" />,
+    name: '2. Estudio',
+    description: 'Aserta, la aseguradora, realiza el estudio de viabilidad sin coste para ofrecerte las mejores condiciones.',
+  },
+  {
+    icon: <Send className="h-8 w-8 text-accent" />,
+    name: '3. Emisión',
+    description: 'Una vez aprobada, se emite la póliza de caución y recibes tu garantía lista para presentar.',
+  },
 ];
 
-const AdvantagesIntro = () => {
+const HowItWorks = () => {
+  const officeImage = PlaceHolderImages.find(p => p.id === 'about-office');
+  
   return (
-    <section className="py-16 sm:py-24">
+    <section id="como-trabajamos" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-base font-semibold leading-7 text-white font-headline">La Alternativa Inteligente</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-              Optimice la salud financiera de su empresa
-            </p>
-            <p className="mt-6 text-lg text-white/80">
-              El seguro de caución es la herramienta que le permite crecer sin las ataduras y costes de los avales bancarios tradicionales. Descubra por qué cada vez más empresas eligen esta opción.
-            </p>
-            <Button asChild className="mt-8" size="lg">
-              <Link href="/ventajas">Ver todas las ventajas</Link>
-            </Button>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="relative aspect-square lg:aspect-[4/3.5] rounded-lg overflow-hidden">
+             {officeImage && (
+                <Image
+                    src={officeImage.imageUrl}
+                    alt={officeImage.description}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    data-ai-hint={officeImage.imageHint}
+                />
+             )}
+             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
           </div>
-          <div className="space-y-4">
-            {advantages.map((advantage) => (
-              <div key={advantage} className="flex items-start">
-                <CheckCircle2 className="h-6 w-6 text-white flex-shrink-0 mr-3 mt-1" />
-                <span className="text-lg text-white">{advantage}</span>
-              </div>
-            ))}
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+              Cómo trabajamos: Rápido, Claro y Eficiente
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Nuestro proceso está diseñado para darte una respuesta en tiempo récord. Tu tranquilidad es nuestra prioridad.
+            </p>
+            <div className="mt-10 space-y-8">
+              {steps.map((step, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent/10">
+                    {step.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-primary">{step.name}</h3>
+                    <p className="mt-1 text-muted-foreground">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <Button asChild className="mt-10">
+              <Link href="/contacto">Empezar ahora</Link>
+            </Button>
           </div>
         </div>
       </div>
@@ -41,4 +72,4 @@ const AdvantagesIntro = () => {
   );
 };
 
-export default AdvantagesIntro;
+export default HowItWorks;
