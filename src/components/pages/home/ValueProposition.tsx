@@ -43,8 +43,8 @@ const ValueProposition = () => {
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
-             <Link href={feature.href} key={feature.title} className="block">
-              <Card className="text-center h-full shadow-sm hover:shadow-lg transition-shadow duration-300 border-transparent hover:border-accent">
+             <Link href={feature.href} key={feature.title} className="block h-full">
+              <Card className="text-center h-full shadow-sm hover:shadow-xl transition-all duration-300 hover:border-accent border">
                 <CardHeader>
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-lg bg-accent/10">
                     {feature.icon}

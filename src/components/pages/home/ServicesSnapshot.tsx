@@ -63,22 +63,19 @@ const ServicesSnapshot = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((solution) => (
-            <Card key={solution.title} className="bg-card flex flex-col">
-                <CardHeader className="flex-row items-start gap-4">
-                  <solution.icon className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <CardTitle className="text-lg font-semibold">{solution.title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground text-sm">{solution.description}</p>
-                </CardContent>
-                <div className="p-6 pt-0">
-                   <Button variant="outline" asChild className="w-full">
-                     <Link href={solution.href}>Saber más</Link>
-                   </Button>
-                </div>
-            </Card>
+            <Link href={solution.href} key={solution.title} className="block h-full">
+              <Card className="bg-card flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:border-accent border">
+                  <CardHeader className="flex-row items-start gap-4">
+                    <solution.icon className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
+                    <div>
+                      <CardTitle className="text-lg font-semibold">{solution.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground text-sm">{solution.description}</p>
+                  </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
         <div className="text-center mt-12">
