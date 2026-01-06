@@ -35,10 +35,9 @@ export default function RootLayout({
     <html lang="es" className={`scroll-smooth ${inter.variable}`}>
       <body className={cn('font-body antialiased min-h-screen flex flex-col relative')}>
         <div 
-          className="fixed inset-0 -z-20 h-full w-full"
+          className="absolute inset-0 -z-20"
           style={{
             backgroundImage: 'linear-gradient(to bottom, #F2A36B 0%, #E85C1A 25%, #E10600 50%, #7A0C14 75%, #000000 100%)',
-            backgroundAttachment: 'fixed'
           }}
         ></div>
         <div className="fixed inset-0 -z-10 h-full w-full opacity-5">
