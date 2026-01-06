@@ -35,10 +35,10 @@ const TestimonialsSection = () => {
     <section className="bg-transparent py-16 sm:py-24">
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Nunca fallamos al Protegido
           </h2>
-          <p className="mt-4 text-lg text-white">
+          <p className="mt-4 text-lg text-muted-foreground">
               Nuestra mayor satisfacción es el éxito y la tranquilidad de las empresas que confían en nosotros.
           </p>
           
@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
               <CarouselItem key={index}>
                   <Card className="border-none shadow-none bg-transparent">
                   <CardContent className="flex flex-col items-center text-center p-0">
-                      <blockquote className="max-w-2xl text-xl font-medium text-white">
+                      <blockquote className="max-w-2xl text-xl font-medium text-primary">
                       &ldquo;{testimonial.text}&rdquo;
                       </blockquote>
                       <div className="mt-6 flex items-center gap-4">
