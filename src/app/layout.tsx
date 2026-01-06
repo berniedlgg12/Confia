@@ -34,16 +34,14 @@ export default function RootLayout({
   return (
     <html lang="es" className={`scroll-smooth ${inter.variable}`}>
       <body className={cn('font-body antialiased min-h-screen flex flex-col relative')}>
-        <div className="fixed inset-0 -z-20 h-full w-full bg-white"></div>
-        <div className="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
         <div 
-          className="fixed inset-0 -z-30 h-full w-full"
+          className="fixed inset-0 -z-20 h-full w-full"
           style={{
             backgroundImage: 'linear-gradient(90deg, #F2A36B 0%, #E85C1A 25%, #E10600 50%, #7A0C14 75%, #000000 100%)',
             backgroundAttachment: 'fixed'
           }}
         ></div>
-        <div className="fixed inset-0 -z-40 h-full w-full opacity-5">
+        <div className="fixed inset-0 -z-10 h-full w-full opacity-5">
             <Image
                 src="/Logo/logotipo-usos-01.png"
                 alt="Confía Logo Watermark"
