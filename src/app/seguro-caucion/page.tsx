@@ -84,8 +84,8 @@ const SuretyBondPage = () => {
                 <div key={advantage.title} className="flex items-start gap-4">
                     <div className="flex-shrink-0 bg-accent/10 p-3 rounded-full">{advantage.icon}</div>
                     <div>
-                      <h3 className="font-semibold text-primary text-lg">{advantage.title}</h3>
-                      <p className="text-muted-foreground">{advantage.description}</p>
+                      <h3 className="font-semibold text-primary-foreground text-lg">{advantage.title}</h3>
+                      <p className="text-primary-foreground">{advantage.description}</p>
                     </div>
                 </div>
               ))}
@@ -102,7 +102,7 @@ const SuretyBondPage = () => {
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mb-4">{figure.icon}</div>
                   <h3 className="text-xl font-semibold text-primary">{figure.name}</h3>
                   <p className="mt-2 text-muted-foreground">
-                    {figure.name === 'Asegurador' ? <>La compañía de seguros (<Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>) que emite la póliza y asume el riesgo.</> : figure.role}
+                    {figure.name === 'Asegurador' ? <>La compañía de seguros (<Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{color: '#E10600'}}>Aserta</Link>) que emite la póliza y asume el riesgo.</> : figure.role}
                   </p>
                 </div>
               ))}
