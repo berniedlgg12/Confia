@@ -37,7 +37,7 @@ const ValueProposition = () => {
            <h2 className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Tu garantía de cumplimiento, sin ataduras
           </h2>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+          <p className="mt-6 text-lg leading-8 text-primary-foreground">
             Combinamos el respaldo de la aseguradora líder, <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>, con un servicio de mediación cercano y experto para ofrecerte la mejor solución en seguros de caución.
           </p>
         </div>

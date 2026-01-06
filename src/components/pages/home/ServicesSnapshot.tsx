@@ -57,7 +57,7 @@ const ServicesSnapshot = () => {
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Soluciones de Caución para cada necesidad
           </h2>
-          <p className="mt-4 text-lg text-primary-foreground">
+          <p className="mt-4 text-lg text-muted-foreground">
             Ofrecemos un portfolio de soluciones enfocado en las necesidades específicas de las empresas del sector de la construcción y servicios.
           </p>
         </div>
