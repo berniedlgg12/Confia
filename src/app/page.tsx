@@ -11,10 +11,10 @@ export default function Home() {
     <>
       <HeroSection />
       <AnimatedOnScroll>
-        <ValueProposition />
+        <ServicesSnapshot />
       </AnimatedOnScroll>
       <AnimatedOnScroll>
-        <ServicesSnapshot />
+        <ValueProposition />
       </AnimatedOnScroll>
       <AnimatedOnScroll>
         <HowItWorks />
