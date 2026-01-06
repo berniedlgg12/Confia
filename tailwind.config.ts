@@ -20,6 +20,15 @@ export default {
         body: ['var(--font-inter)', 'sans-serif'],
         headline: ['var(--font-inter)', 'sans-serif'],
       },
+      spacing: {
+        '5/6': '83.333333%',
+      },
+      height: {
+        '5/6': '83.333333%',
+      },
+      width: {
+        '5/6': '83.333333%',
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
