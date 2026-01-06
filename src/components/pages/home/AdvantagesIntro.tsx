@@ -36,13 +36,13 @@ const HowItWorks = () => {
         <div className="mt-10 space-y-8 max-w-xl w-full">
           {steps.map((step, index) => (
             <div key={index} className="flex items-start gap-4">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent/10">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent">
                 {step.icon}
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">{step.name}</h3>
                 <p className="mt-1 text-primary-foreground">
-                  {step.name === '2. Estudio' ? <><Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>, la aseguradora, realiza el estudio de viabilidad sin coste para ofrecerte las mejores condiciones.</> : step.description}
+                  {step.name === '2. Estudio' ? 'Aserta, la aseguradora, realiza el estudio de viabilidad sin coste para ofrecerte las mejores condiciones.' : step.description}
                 </p>
               </div>
             </div>
