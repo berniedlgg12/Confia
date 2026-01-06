@@ -23,30 +23,28 @@ const steps = [
 ];
 
 const HowItWorks = () => {
-  const officeImage = PlaceHolderImages.find(p => p.id === 'about-office');
-  
+  const image = PlaceHolderImages.find(p => p.id === 'about-office');
   return (
     <section id="como-trabajamos" className="py-16 sm:py-24 bg-transparent">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-square lg:aspect-[4/3.5] rounded-lg overflow-hidden">
-             {officeImage && (
+             {image && (
                 <Image
-                    src={officeImage.imageUrl}
-                    alt={officeImage.description}
+                    src={image.imageUrl}
+                    alt={image.description}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    data-ai-hint={officeImage.imageHint}
+                    data-ai-hint={image.imageHint}
                 />
              )}
              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
           </div>
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
               La Alternativa Inteligente
             </h2>
-            <p className="mt-4 text-lg text-black">
+            <p className="mt-4 text-lg text-muted-foreground">
               Optimice la salud financiera de su empresa.
             </p>
             <div className="mt-10 space-y-8">
