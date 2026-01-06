@@ -35,19 +35,21 @@ export default function RootLayout({
     <html lang="es" className={`scroll-smooth ${inter.variable}`}>
       <body className={cn('font-body antialiased min-h-screen flex flex-col relative')}>
         <div 
-          className="absolute inset-0 -z-20"
+          className="absolute inset-0 -z-20 h-full"
           style={{
             backgroundImage: 'linear-gradient(to bottom, #F2A36B 0%, #E85C1A 25%, #E10600 50%, #7A0C14 75%, #000000 100%)',
           }}
         ></div>
-        <div className="fixed inset-0 -z-10 h-full w-full opacity-5">
-            <Image
-                src="/Logo/logotipo-usos-01.png"
-                alt="Confía Logo Watermark"
-                layout="fill"
-                objectFit="cover"
-                quality={10}
-            />
+        <div className="fixed inset-0 -z-10 h-full w-full overflow-hidden">
+            <div className="absolute -right-1/4 -top-1/4 h-1/2 w-1/2 opacity-10 transform rotate-45">
+                <Image
+                    src="/Logo/logotipo-usos-08.png"
+                    alt="Confía Logo Watermark"
+                    layout="fill"
+                    objectFit="contain"
+                    quality={20}
+                />
+            </div>
         </div>
         <Header />
         <main className="flex-grow">{children}</main>
