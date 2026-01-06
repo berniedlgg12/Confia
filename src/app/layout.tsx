@@ -4,20 +4,33 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { cn } from '@/lib/utils';
-import { Poppins, Inter } from 'next/font/google';
+import localFont from 'next/font/local';
+import Image from 'next/image';
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-  weight: ['400', '500', '600', '700', '800', '900'],
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-  weight: ['400', '500', '600'],
+const tangoSans = localFont({
+  src: [
+    {
+      path: '../../public/fonts/TangoSans.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/TangoSans_Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/TangoSans_BoldItalic.ttf',
+      weight: '700',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/TangoSans_Italic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-tango-sans',
 });
 
 export const metadata: Metadata = {
@@ -31,7 +44,7 @@ export const metadata: Metadata = {
     siteName: 'Confía Agencia de Seguros',
     images: [
       {
-        url: '/og-image.jpg', // Make sure to add an OG image to the public folder
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
       },
@@ -47,8 +60,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`scroll-smooth ${poppins.variable} ${inter.variable}`}>
-      <body className={cn('font-body antialiased min-h-screen flex flex-col relative bg-transparent')}>
+    <html lang="es" className={`scroll-smooth ${tangoSans.variable}`}>
+      <body className={cn('font-body antialiased min-h-screen flex flex-col relative')}>
+        <div className="fixed inset-0 -z-20 h-full w-full bg-white"></div>
+        <div className="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div 
+          className="fixed inset-0 -z-30 h-full w-full"
+          style={{
+            backgroundImage: 'linear-gradient(to bottom, #FFFFFF, #f5b3a8, #e83322, #8c1d16, #000000)',
+            backgroundAttachment: 'fixed'
+          }}
+        ></div>
+        <div className="fixed inset-0 -z-40 h-full w-full opacity-5">
+            <Image
+                src="/Logo/logotipo-usos-01.png"
+                alt="Confía Logo Watermark"
+                layout="fill"
+                objectFit="cover"
+                quality={10}
+            />
+        </div>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

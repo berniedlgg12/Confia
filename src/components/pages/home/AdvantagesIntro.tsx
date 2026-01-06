@@ -46,7 +46,7 @@ const HowItWorks = () => {
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               La Alternativa Inteligente
             </h2>
-            <p className="mt-4 text-lg text-primary">
+            <p className="mt-4 text-lg text-black">
               Optimice la salud financiera de su empresa.
             </p>
             <div className="mt-10 space-y-8">

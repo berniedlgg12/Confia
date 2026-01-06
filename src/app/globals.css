@@ -71,8 +71,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(to bottom, #FFFFFF, #f5b3a8, #e83322, #8c1d16, #000000);
-    background-attachment: fixed;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline;
