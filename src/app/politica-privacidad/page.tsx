@@ -9,7 +9,7 @@ const PrivacyPolicyPage = () => {
             <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
               Política de Privacidad
             </h1>
-            <p className="mt-4 text-muted-foreground">Última actualización: 24 de mayo de 2024</p>
+            <p className="mt-4 text-muted-foreground">Última actualización: 6 de enero 2026</p>
           </header>
 
           <div className="max-w-4xl mx-auto prose prose-lg text-primary-foreground space-y-6">
@@ -19,7 +19,7 @@ const PrivacyPolicyPage = () => {
 
             <h2 className="text-2xl font-bold text-primary">1. Responsable del Tratamiento</h2>
             <p>
-              El responsable del tratamiento de sus datos personales es CONFÍA Agencia de Seguro S.L., con los datos de contacto proporcionados anteriormente. Puede contactarnos por correo electrónico en <a href="mailto:bdlg@confiax.es" className="text-accent hover:underline">bdlg@confiax.es</a>.
+              El responsable del tratamiento de sus datos personales es CONFÍA Agencia de Seguro S.L., con los datos de contacto proporcionados anteriormente. Puede contactarnos por correo electrónico en <a href="mailto:bdlg@confiax.es" className="text-primary hover:underline">bdlg@confiax.es</a>.
             </p>
 
             <h2 className="text-2xl font-bold text-primary">2. Información que recopilamos</h2>
@@ -69,7 +69,7 @@ const PrivacyPolicyPage = () => {
 
             <h2 className="text-2xl font-bold text-primary">7. Sus Derechos</h2>
             <p>
-              Usted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos, como se explica en la información adicional. Puede ejercer sus derechos enviando un correo electrónico a <a href="mailto:bdlg@confiax.es" className="text-accent hover:underline">bdlg@confiax.es</a>, adjuntando una copia de su DNI. También tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).
+              Usted tiene derecho a acceder, rectificar y suprimir sus datos, así como otros derechos, como se explica en la información adicional. Puede ejercer sus derechos enviando un correo electrónico a <a href="mailto:bdlg@confiax.es" className="text-primary hover:underline">bdlg@confiax.es</a>, adjuntando una copia de su DNI. También tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).
             </p>
 
             <h2 className="text-2xl font-bold text-primary">8. Cambios en Nuestra Política de Privacidad</h2>
