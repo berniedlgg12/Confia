@@ -4,33 +4,12 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { cn } from '@/lib/utils';
-import localFont from 'next/font/local';
+import { Inter } from 'next/font/google';
 import Image from 'next/image';
 
-const tangoSans = localFont({
-  src: [
-    {
-      path: '../../public/fonts/TangoSans.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/TangoSans_Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/TangoSans_BoldItalic.ttf',
-      weight: '700',
-      style: 'italic',
-    },
-    {
-      path: '../../public/fonts/TangoSans_Italic.ttf',
-      weight: '400',
-      style: 'italic',
-    },
-  ],
-  variable: '--font-tango-sans',
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
@@ -53,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`scroll-smooth ${tangoSans.variable}`}>
+    <html lang="es" className={`scroll-smooth ${inter.variable}`}>
       <body className={cn('font-body antialiased min-h-screen flex flex-col relative')}>
         <div className="fixed inset-0 -z-20 h-full w-full bg-white"></div>
         <div className="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
