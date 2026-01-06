@@ -1,3 +1,4 @@
+
 export const NAV_LINKS = [
   { href: '/', label: 'Inicio' },
   { href: '/seguro-caucion', label: '¿Qué es Caución?' },
