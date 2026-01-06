@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Check, Users, Shield, Building, Banknote, TrendingUp, Unlock, Zap, Scale, ShieldCheck } from 'lucide-react';
 import CtaSection from '@/components/pages/shared/CtaSection';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import AnimatedOnScroll from '@/components/AnimatedOnScroll';
 
 const figures = [
   { name: 'Tomador del Seguro', role: 'El contratista o empresa que contrata la póliza para garantizar su obligación.', icon: <Users className="w-8 h-8 text-accent" /> },
@@ -50,72 +51,82 @@ const faqItems = [
 const SuretyBondPage = () => {
   return (
     <>
-      <div className="bg-transparent">
-        <div className="container mx-auto text-center py-16 sm:py-24">
-          <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
-            ¿Qué es el Seguro de Caución?
-          </h1>
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
-            La herramienta clave para garantizar sus obligaciones contractuales con agilidad, solvencia y sin consumir recursos bancarios.
-          </p>
+      <AnimatedOnScroll>
+        <div className="bg-transparent">
+          <div className="container mx-auto text-center py-16 sm:py-24">
+            <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
+              ¿Qué es el Seguro de Caución?
+            </h1>
+            <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
+              La herramienta clave para garantizar sus obligaciones contractuales con agilidad, solvencia y sin consumir recursos bancarios.
+            </p>
+          </div>
         </div>
-      </div>
+      </AnimatedOnScroll>
 
       <div className="container mx-auto py-16 sm:py-24">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-3xl font-bold text-primary mb-6">Un Contrato de Garantía a tu Favor</h2>
-            <div className="space-y-4 text-muted-foreground">
-              <p>
-                El seguro de caución es un contrato mediante el cual una compañía aseguradora se obliga a indemnizar al beneficiario (asegurado) por los perjuicios que sufra en caso de que el contratista (tomador) incumpla las obligaciones, legales o contractuales, que mantenga con él.
-              </p>
-              <p>
-               En esencia, es una garantía de cumplimiento que sustituye a los tradicionales y más costosos avales bancarios. Su principal objetivo es asegurar que un acuerdo entre dos partes se cumpla en tiempo y forma, protegiendo al beneficiario sin perjudicar la capacidad financiera del contratista.
-              </p>
+        <AnimatedOnScroll>
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-primary mb-6">Un Contrato de Garantía a tu Favor</h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  El seguro de caución es un contrato mediante el cual una compañía aseguradora se obliga a indemnizar al beneficiario (asegurado) por los perjuicios que sufra en caso de que el contratista (tomador) incumpla las obligaciones, legales o contractuales, que mantenga con él.
+                </p>
+                <p>
+                 En esencia, es una garantía de cumplimiento que sustituye a los tradicionales y más costosos avales bancarios. Su principal objetivo es asegurar que un acuerdo entre dos partes se cumpla en tiempo y forma, protegiendo al beneficiario sin perjudicar la capacidad financiera del contratista.
+                </p>
+              </div>
+            </div>
+             <div className="grid grid-cols-1 gap-8">
+              {advantages.map((advantage) => (
+                <div key={advantage.title} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 bg-accent/10 p-3 rounded-full">{advantage.icon}</div>
+                    <div>
+                      <h3 className="font-semibold text-primary text-lg">{advantage.title}</h3>
+                      <p className="text-muted-foreground">{advantage.description}</p>
+                    </div>
+                </div>
+              ))}
             </div>
           </div>
-           <div className="grid grid-cols-1 gap-8">
-            {advantages.map((advantage) => (
-              <div key={advantage.title} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 bg-accent/10 p-3 rounded-full">{advantage.icon}</div>
-                  <div>
-                    <h3 className="font-semibold text-primary text-lg">{advantage.title}</h3>
-                    <p className="text-muted-foreground">{advantage.description}</p>
-                  </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        </AnimatedOnScroll>
 
-        <div className="mt-24">
-          <h2 className="text-3xl font-bold text-primary text-center mb-12">Las 3 Partes Clave del Contrato</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {figures.map(figure => (
-              <div key={figure.name} className="text-center bg-card p-8 rounded-lg shadow-sm border">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mb-4">{figure.icon}</div>
-                <h3 className="text-xl font-semibold text-primary">{figure.name}</h3>
-                <p className="mt-2 text-muted-foreground">{figure.role}</p>
-              </div>
-            ))}
+        <AnimatedOnScroll>
+          <div className="mt-24">
+            <h2 className="text-3xl font-bold text-primary text-center mb-12">Las 3 Partes Clave del Contrato</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {figures.map(figure => (
+                <div key={figure.name} className="text-center bg-card p-8 rounded-lg shadow-sm border">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mb-4">{figure.icon}</div>
+                  <h3 className="text-xl font-semibold text-primary">{figure.name}</h3>
+                  <p className="mt-2 text-muted-foreground">{figure.role}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </AnimatedOnScroll>
 
-        <div className="mt-24 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary text-center mb-12">Preguntas Frecuentes (FAQ)</h2>
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map(item => (
-              <AccordionItem value={item.question} key={item.question}>
-                <AccordionTrigger className="text-lg text-left">{item.question}</AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+        <AnimatedOnScroll>
+          <div className="mt-24 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary text-center mb-12">Preguntas Frecuentes (FAQ)</h2>
+            <Accordion type="single" collapsible className="w-full">
+              {faqItems.map(item => (
+                <AccordionItem value={item.question} key={item.question}>
+                  <AccordionTrigger className="text-lg text-left">{item.question}</AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </AnimatedOnScroll>
 
       </div>
-      <CtaSection />
+      <AnimatedOnScroll>
+        <CtaSection />
+      </AnimatedOnScroll>
     </>
   );
 };

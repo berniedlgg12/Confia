@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import CtaSection from "@/components/pages/shared/CtaSection";
 import Link from "next/link";
 import { LucideIcon, Award, Truck, FileText, Sun, Building2, Briefcase, Plane, Wrench, FileArchive, Building, Recycle, HeartHandshake } from "lucide-react";
+import AnimatedOnScroll from "@/components/AnimatedOnScroll";
 
 type Solution = {
   id: string;
@@ -83,47 +84,53 @@ const solutions: Solution[] = [
 const SolutionsPage = () => {
   return (
     <>
-      <div className="bg-transparent">
-        <div className="container mx-auto text-center py-16 sm:py-24">
-          <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
-            Soluciones de Caución a tu Medida
-          </h1>
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
-            A través de Aserta, ofrecemos una solución de caución para cada tipo de garantía que tu empresa necesite. Encuentra la tuya.
-          </p>
-        </div>
-      </div>
-
-      <div className="bg-transparent">
-        <div className="container mx-auto py-16 sm:py-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution) => (
-              <Link href="/contacto" key={solution.id} className="block h-full">
-                <Card id={solution.id} className="bg-card shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col border h-full">
-                  <CardHeader>
-                    <div className="flex items-start gap-4">
-                      <solution.icon className="w-10 h-10 text-accent flex-shrink-0" />
-                      <CardTitle className="text-xl mt-1">{solution.title}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex-grow space-y-4">
-                    <p className="text-muted-foreground">{solution.description}</p>
-                    <div>
-                      <h4 className="font-semibold text-sm text-primary">¿Cuándo se pide?</h4>
-                      <p className="text-sm text-muted-foreground">{solution.when}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-sm text-primary">Documentación habitual</h4>
-                      <p className="text-sm text-muted-foreground">{solution.docs}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+      <AnimatedOnScroll>
+        <div className="bg-transparent">
+          <div className="container mx-auto text-center py-16 sm:py-24">
+            <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
+              Soluciones de Caución a tu Medida
+            </h1>
+            <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
+              A través de Aserta, ofrecemos una solución de caución para cada tipo de garantía que tu empresa necesite. Encuentra la tuya.
+            </p>
           </div>
         </div>
-      </div>
-      <CtaSection />
+      </AnimatedOnScroll>
+
+      <AnimatedOnScroll>
+        <div className="bg-transparent">
+          <div className="container mx-auto py-16 sm:py-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {solutions.map((solution) => (
+                <Link href="/contacto" key={solution.id} className="block h-full">
+                  <Card id={solution.id} className="bg-card shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col border h-full">
+                    <CardHeader>
+                      <div className="flex items-start gap-4">
+                        <solution.icon className="w-10 h-10 text-accent flex-shrink-0" />
+                        <CardTitle className="text-xl mt-1">{solution.title}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="flex-grow space-y-4">
+                      <p className="text-muted-foreground">{solution.description}</p>
+                      <div>
+                        <h4 className="font-semibold text-sm text-primary">¿Cuándo se pide?</h4>
+                        <p className="text-sm text-muted-foreground">{solution.when}</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-sm text-primary">Documentación habitual</h4>
+                        <p className="text-sm text-muted-foreground">{solution.docs}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </AnimatedOnScroll>
+      <AnimatedOnScroll>
+        <CtaSection />
+      </AnimatedOnScroll>
     </>
   )
 }

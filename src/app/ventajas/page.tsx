@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Banknote, TrendingUp, Unlock, ShieldCheck, Zap, Scale, Rocket, CheckCircle } from "lucide-react";
 import CtaSection from "@/components/pages/shared/CtaSection";
+import AnimatedOnScroll from "@/components/AnimatedOnScroll";
 
 const advantages = [
   {
@@ -38,35 +39,41 @@ const advantages = [
 const AdvantagesPage = () => {
   return (
     <>
-      <div className="bg-transparent">
-        <div className="container mx-auto text-center py-16 sm:py-24">
-          <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
-            Caución vs. Aval Bancario
-          </h1>
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
-            Descubra por qué el seguro de caución es la elección estratégica para empresas que buscan eficiencia financiera y agilidad operativa.
-          </p>
-        </div>
-      </div>
-
-      <div className="bg-transparent">
-        <div className="container mx-auto py-16 sm:py-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {advantages.map((advantage) => (
-              <Card key={advantage.title} className="bg-card shadow-sm hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <div className="flex-shrink-0 bg-accent/10 p-3 rounded-full">{advantage.icon}</div>
-                  <CardTitle className="text-xl">{advantage.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{advantage.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+      <AnimatedOnScroll>
+        <div className="bg-transparent">
+          <div className="container mx-auto text-center py-16 sm:py-24">
+            <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
+              Caución vs. Aval Bancario
+            </h1>
+            <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
+              Descubra por qué el seguro de caución es la elección estratégica para empresas que buscan eficiencia financiera y agilidad operativa.
+            </p>
           </div>
         </div>
-      </div>
-      <CtaSection />
+      </AnimatedOnScroll>
+
+      <AnimatedOnScroll>
+        <div className="bg-transparent">
+          <div className="container mx-auto py-16 sm:py-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {advantages.map((advantage) => (
+                <Card key={advantage.title} className="bg-card shadow-sm hover:shadow-lg transition-shadow duration-300">
+                  <CardHeader className="flex flex-row items-center gap-4">
+                    <div className="flex-shrink-0 bg-accent/10 p-3 rounded-full">{advantage.icon}</div>
+                    <CardTitle className="text-xl">{advantage.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{advantage.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </AnimatedOnScroll>
+      <AnimatedOnScroll>
+        <CtaSection />
+      </AnimatedOnScroll>
     </>
   )
 }
