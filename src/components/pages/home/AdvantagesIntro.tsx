@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ScanSearch, Rocket, Send } from 'lucide-react';
@@ -6,17 +7,17 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const steps = [
   {
-    icon: <ScanSearch className="h-8 w-8 text-accent" />,
+    icon: <ScanSearch className="h-8 w-8 text-white" />,
     name: '1. Revisión',
     description: 'Contactas con nosotros, analizamos tu necesidad y la documentación de forma gratuita.',
   },
   {
-    icon: <Rocket className="h-8 w-8 text-accent" />,
+    icon: <Rocket className="h-8 w-8 text-white" />,
     name: '2. Estudio',
     description: 'Aserta, la aseguradora, realiza el estudio de viabilidad sin coste para ofrecerte las mejores condiciones.',
   },
   {
-    icon: <Send className="h-8 w-8 text-accent" />,
+    icon: <Send className="h-8 w-8 text-white" />,
     name: '3. Emisión',
     description: 'Una vez aprobada, se emite la póliza de caución y recibes tu garantía lista para presentar.',
   },
@@ -24,7 +25,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="como-trabajamos" className="py-16 sm:py-24 bg-transparent">
+    <section id="como-trabajamos" className="py-16 sm:py-24 bg-white">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="lg:col-start-2">
@@ -37,7 +38,7 @@ const HowItWorks = () => {
             <div className="mt-10 space-y-8">
               {steps.map((step, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent/10">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent">
                     {step.icon}
                   </div>
                   <div>
