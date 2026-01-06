@@ -42,13 +42,6 @@ export const metadata: Metadata = {
     description: 'Soluciones en seguros de caución para empresas. Obtén tu garantía con Aserta de forma ágil y sin consumir tus líneas de crédito.',
     url: 'https://www.confiax.es',
     siteName: 'Confía Agencia de Seguros',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-      },
-    ],
     locale: 'es_ES',
     type: 'website',
   },
