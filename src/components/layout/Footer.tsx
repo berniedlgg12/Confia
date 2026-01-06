@@ -79,9 +79,6 @@ const Footer = () => {
           <p className="text-center sm:text-left text-xs text-primary-foreground/60">
             &copy; {new Date().getFullYear()} CONFÍA Agencia de Seguro S.L. Todos los derechos reservados. <br/> Confía actúa como agente de seguros mediador de productos de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link> Aseguradora S.A.U.
           </p>
-           <p className="text-xs text-primary-foreground/60 text-center sm:text-right">
-            Diseño y Desarrollo Web por <a href="https://nextscenario.com" target="_blank" rel="noopener" className="underline hover:text-primary-foreground">Next Scenario</a>
-          </p>
         </div>
       </div>
     </footer>
