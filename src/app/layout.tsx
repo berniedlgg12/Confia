@@ -39,7 +39,7 @@ export default function RootLayout({
         <div 
           className="fixed inset-0 -z-30 h-full w-full"
           style={{
-            backgroundImage: 'linear-gradient(to bottom, #FFFFFF, #f5b3a8, #e83322, #8c1d16, #000000)',
+            backgroundImage: 'linear-gradient(90deg, #F2A36B 0%, #E85C1A 25%, #E10600 50%, #7A0C14 75%, #000000 100%)',
             backgroundAttachment: 'fixed'
           }}
         ></div>
