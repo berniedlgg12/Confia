@@ -70,7 +70,7 @@ const SuretyBondPage = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl font-bold text-primary mb-6">Un Contrato de Garantía a tu Favor</h2>
-              <div className="space-y-4 text-muted-foreground">
+              <div className="space-y-4 text-primary-foreground">
                 <p>
                   El seguro de caución es un contrato mediante el cual una compañía aseguradora se obliga a indemnizar al beneficiario (asegurado) por los perjuicios que sufra en caso de que el contratista (tomador) incumpla las obligaciones, legales o contractuales, que mantenga con él.
                 </p>

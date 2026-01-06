@@ -57,7 +57,7 @@ const Footer = () => {
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-              <span className="text-primary-foreground/80">Calle de la Confianza, 123<br/>28001 Madrid, España</span>
+              <span className="text-primary-foreground/80">calle ferraz 2, 2° izquierda<br/>28008 madrid</span>
             </li>
           </ul>
         </div>

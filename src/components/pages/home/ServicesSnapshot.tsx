@@ -58,7 +58,7 @@ const ServicesSnapshot = () => {
             Soluciones de Caución para cada necesidad
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Ofrecemos un portfolio de soluciones enfocado en las necesidades específicas de las empresas del sector de la construcción y servicios.
+            Ofrecemos un portafolio de soluciones enfocado en las necesidades específicas de las empresas del sector de la construcción y servicios.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
