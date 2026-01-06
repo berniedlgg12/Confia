@@ -7,17 +7,17 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const steps = [
   {
-    icon: <ScanSearch className="h-8 w-8 text-white" />,
+    icon: <ScanSearch className="h-8 w-8 text-accent" />,
     name: '1. Revisión',
     description: 'Contactas con nosotros, analizamos tu necesidad y la documentación de forma gratuita.',
   },
   {
-    icon: <Rocket className="h-8 w-8 text-white" />,
+    icon: <Rocket className="h-8 w-8 text-accent" />,
     name: '2. Estudio',
     description: 'Aserta, la aseguradora, realiza el estudio de viabilidad sin coste para ofrecerte las mejores condiciones.',
   },
   {
-    icon: <Send className="h-8 w-8 text-white" />,
+    icon: <Send className="h-8 w-8 text-accent" />,
     name: '3. Emisión',
     description: 'Una vez aprobada, se emite la póliza de caución y recibes tu garantía lista para presentar.',
   },
@@ -25,7 +25,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="como-trabajamos" className="py-16 sm:py-24 bg-white">
+    <section id="como-trabajamos" className="py-16 sm:py-24 bg-transparent">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="lg:col-start-2">
@@ -38,7 +38,7 @@ const HowItWorks = () => {
             <div className="mt-10 space-y-8">
               {steps.map((step, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-accent/10">
                     {step.icon}
                   </div>
                   <div>
