@@ -51,7 +51,7 @@ const ContactPage = () => {
                       </div>
                       <div>
                       <h4 className="font-semibold text-primary">Oficina</h4>
-                      <p className="text-muted-foreground">Calle Ferraz 2, 2° izquierda<br />28008 madrid</p>
+                      <p className="text-muted-foreground">Calle Ferraz 2, 2° izquierda<br />28008 Madrid</p>
                       </div>
                   </div>
                   </div>
