@@ -48,7 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`scroll-smooth ${poppins.variable} ${inter.variable}`}>
-      <body className={cn('font-body antialiased min-h-screen flex flex-col relative bg-background text-foreground')}>
+      <body className={cn('font-body antialiased min-h-screen flex flex-col relative bg-transparent')}>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
