@@ -4,8 +4,6 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const AboutPage = () => {
-  const teamImage = PlaceHolderImages.find(p => p.id === 'about-team');
-
   return (
     <>
       <div className="bg-transparent py-24 sm:py-32">
@@ -21,18 +19,7 @@ const AboutPage = () => {
 
       <div className="container mx-auto py-16 sm:py-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {teamImage && (
-                <div className="relative aspect-square lg:aspect-auto lg:h-full rounded-lg overflow-hidden order-last lg:order-first">
-                    <Image 
-                        src={teamImage.imageUrl}
-                        alt={teamImage.description}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={teamImage.imageHint}
-                    />
-                </div>
-            )}
-            <div className="max-w-xl">
+            <div className="max-w-xl lg:col-start-1">
                 <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">Nuestra Historia y Filosofía</h2>
                 <div className="mt-6 space-y-4 text-muted-foreground">
                     <p>

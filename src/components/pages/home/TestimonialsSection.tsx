@@ -14,19 +14,16 @@ const testimonials = [
     text: "El cambio a los seguros de caución con CONFÍA ha sido un antes y un después. Ahora podemos presentarnos a más concursos sin preocuparnos por el impacto en nuestras líneas de crédito. Su equipo es increíblemente profesional y eficiente.",
     name: 'Javier García',
     title: 'Director de Contratación, G-Construct',
-    image: PlaceHolderImages.find(p => p.id === 'testimonial-1'),
   },
   {
     text: "Necesitábamos una solución para las cantidades entregadas a cuenta que no afectara nuestra financiación. Confía entendió nuestras necesidades y nos ofreció una póliza de caución de Aserta que nos ha dado una flexibilidad enorme.",
     name: 'Laura Méndez',
     title: 'CEO, Promociones Urbanas S.L.',
-    image: PlaceHolderImages.find(p => p.id === 'testimonial-2'),
   },
     {
     text: "Teníamos varias obras en marcha y la gestión de avales bancarios era un quebradero de cabeza. El equipo de Confía nos asesoró y consolidamos todas nuestras garantías bajo seguros de caución de Aserta. El ahorro en costes y tiempo ha sido notable.",
     name: 'Carlos Jiménez',
     title: 'Jefe de Obra, Infraestructuras Globales',
-    image: PlaceHolderImages.find(p => p.id === 'testimonial-3'),
   },
 ];
 
@@ -58,16 +55,6 @@ const TestimonialsSection = () => {
                       &ldquo;{testimonial.text}&rdquo;
                       </blockquote>
                       <div className="mt-6 flex items-center gap-4">
-                      {testimonial.image && (
-                          <Image
-                          src={testimonial.image.imageUrl}
-                          alt={`Foto de ${testimonial.name}`}
-                          width={56}
-                          height={56}
-                          className="rounded-full object-cover"
-                          data-ai-hint={testimonial.image.imageHint}
-                          />
-                      )}
                       <div>
                           <p className="font-semibold text-primary">{testimonial.name}</p>
                           <p className="text-sm text-muted-foreground">{testimonial.title}</p>
