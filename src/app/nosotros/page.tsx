@@ -18,10 +18,10 @@ const AboutPage = () => {
       </div>
 
       <div className="container mx-auto py-16 sm:py-24">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="max-w-xl lg:col-start-1">
+        <div className="flex flex-col items-center">
+            <div className="max-w-xl text-center">
                 <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">Nuestra Historia y Filosofía</h2>
-                <div className="mt-6 space-y-4 text-muted-foreground">
+                <div className="mt-6 space-y-4 text-primary-foreground">
                     <p>
                         CONFÍA Agencia de Seguros nació de la visión de un grupo de profesionales con décadas de experiencia en los sectores asegurador y financiero. Observamos una necesidad clara en el mercado: las empresas españolas requerían un socio especializado en garantías que comprendiera sus retos y les ofreciera soluciones más allá del rígido sistema bancario.
                     </p>
