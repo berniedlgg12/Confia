@@ -8,7 +8,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="bg-secondary/50 py-24 sm:py-32">
+      <div className="bg-transparent py-24 sm:py-32">
         <div className="container mx-auto text-center">
             <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
               Socios en tu crecimiento

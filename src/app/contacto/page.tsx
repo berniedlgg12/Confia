@@ -4,7 +4,7 @@ import ContactForm from '@/components/pages/contact/ContactForm';
 const ContactPage = () => {
   return (
     <>
-      <div className="bg-secondary/50">
+      <div className="bg-transparent">
         <div className="container mx-auto text-center py-16 sm:py-24">
           <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
             Solicite su Estudio de Caución

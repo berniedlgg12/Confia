@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 const CtaSection = () => {
   return (
-    <section className="bg-background">
+    <section className="bg-transparent">
       <div className="container mx-auto py-16 sm:py-20">
         <div className="bg-primary text-primary-foreground rounded-lg p-8 sm:p-12 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">

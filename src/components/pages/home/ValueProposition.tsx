@@ -31,7 +31,7 @@ const features = [
 
 const ValueProposition = () => {
   return (
-    <section className="py-16 sm:py-24 bg-background">
+    <section className="py-16 sm:py-24 bg-transparent">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto">
            <h2 className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl">

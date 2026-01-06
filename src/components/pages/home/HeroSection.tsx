@@ -4,7 +4,7 @@ import { ArrowRight, Phone } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-24 pb-20 sm:pt-32 sm:pb-28 lg:pt-40 lg:pb-36 bg-secondary/50">
+    <section className="relative pt-24 pb-20 sm:pt-32 sm:pb-28 lg:pt-40 lg:pb-36 bg-transparent">
       <div className="container mx-auto text-center relative">
         <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl lg:text-7xl">
           Generamos Soluciones Simples

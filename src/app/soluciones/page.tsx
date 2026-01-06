@@ -83,7 +83,7 @@ const solutions: Solution[] = [
 const SolutionsPage = () => {
   return (
     <>
-      <div className="bg-secondary/50">
+      <div className="bg-transparent">
         <div className="container mx-auto text-center py-16 sm:py-24">
           <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
             Soluciones de Caución a tu Medida
@@ -94,7 +94,7 @@ const SolutionsPage = () => {
         </div>
       </div>
 
-      <div className="bg-background">
+      <div className="bg-transparent">
         <div className="container mx-auto py-16 sm:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution) => (

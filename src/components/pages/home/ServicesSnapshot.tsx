@@ -51,14 +51,14 @@ const solutions: Solution[] = [
 
 const ServicesSnapshot = () => {
   return (
-    <section className="py-16 sm:py-24 bg-secondary/50">
+    <section className="py-16 sm:py-24 bg-transparent">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
             Soluciones de Caución para cada necesidad
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Ofrecemos una amplia gama de seguros de caución a través de Aserta para cubrir todas las garantías que tu empresa pueda necesitar.
+          <p className="mt-4 text-lg text-white">
+            Ofrecemos un portfolio de soluciones enfocado en las necesidades específicas de las empresas del sector de la construcción y servicios.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

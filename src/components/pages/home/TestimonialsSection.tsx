@@ -11,7 +11,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const testimonials = [
   {
-    text: "El cambio a los seguros de caución con Confía ha sido un antes y un después. Ahora podemos presentarnos a más concursos sin preocuparnos por el impacto en nuestras líneas de crédito. Su equipo es increíblemente profesional y eficiente.",
+    text: "El cambio a los seguros de caución con CONFÍA ha sido un antes y un después. Ahora podemos presentarnos a más concursos sin preocuparnos por el impacto en nuestras líneas de crédito. Su equipo es increíblemente profesional y eficiente.",
     name: 'Javier García',
     title: 'Director de Contratación, G-Construct',
     image: PlaceHolderImages.find(p => p.id === 'testimonial-1'),
@@ -32,13 +32,13 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="bg-secondary/50 py-16 sm:py-24">
+    <section className="bg-transparent py-16 sm:py-24">
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              Lo que dicen nuestros protegidos
+        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Nunca fallamos al Protegido
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg text-white">
               Nuestra mayor satisfacción es el éxito y la tranquilidad de las empresas que confían en nosotros.
           </p>
           
@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
               <CarouselItem key={index}>
                   <Card className="border-none shadow-none bg-transparent">
                   <CardContent className="flex flex-col items-center text-center p-0">
-                      <blockquote className="max-w-2xl text-xl font-medium text-primary">
+                      <blockquote className="max-w-2xl text-xl font-medium text-white">
                       &ldquo;{testimonial.text}&rdquo;
                       </blockquote>
                       <div className="mt-6 flex items-center gap-4">

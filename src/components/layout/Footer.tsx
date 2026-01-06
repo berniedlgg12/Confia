@@ -5,7 +5,7 @@ import { FOOTER_LINKS } from '@/lib/constants';
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-secondary-foreground border-t">
+    <footer className="bg-transparent text-secondary-foreground border-t">
       <div className="container py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4 flex flex-col gap-4">
           <Logo />
@@ -53,9 +53,9 @@ const Footer = () => {
           </ul>
         </div>
         <div className="lg:col-span-3">
-          <h3 className="font-headline text-base font-semibold mb-4">Legal y Soporte</h3>
+          <h3 className="font-headline text-base font-semibold mb-4">Legal</h3>
           <ul className="space-y-2">
-            {[...FOOTER_LINKS.legal, ...FOOTER_LINKS.support].map((link) => (
+            {FOOTER_LINKS.legal.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   {link.label}
@@ -68,7 +68,7 @@ const Footer = () => {
       <div className="container py-6 border-t">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-center sm:text-left text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} CONFÍA Agencia de Seguros S.L. Todos los derechos reservados. <br/> Confía actúa como agente de seguros mediador de productos de Aserta Aseguradora S.A.U.
+            &copy; {new Date().getFullYear()} CONFÍA Agencia de Seguro S.L. Todos los derechos reservados. <br/> Confía actúa como agente de seguros mediador de productos de Aserta Aseguradora S.A.U.
           </p>
            <p className="text-xs text-muted-foreground text-center sm:text-right">
             Diseño y Desarrollo Web por <a href="https://nextscenario.com" target="_blank" rel="noopener" className="underline">Next Scenario</a>

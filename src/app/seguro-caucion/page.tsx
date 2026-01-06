@@ -50,13 +50,13 @@ const faqItems = [
 const SuretyBondPage = () => {
   return (
     <>
-      <div className="bg-secondary/50">
+      <div className="bg-transparent">
         <div className="container mx-auto text-center py-16 sm:py-24">
           <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-5xl md:text-6xl">
             ¿Qué es el Seguro de Caución?
           </h1>
           <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
-            La herramienta clave para garantizar tus obligaciones contractuales con agilidad, solvencia y sin consumir recursos bancarios.
+            La herramienta clave para garantizar sus obligaciones contractuales con agilidad, solvencia y sin consumir recursos bancarios.
           </p>
         </div>
       </div>
@@ -65,12 +65,12 @@ const SuretyBondPage = () => {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl font-bold text-primary mb-6">Un Contrato de Garantía a tu Favor</h2>
-            <div className="space-y-4 text-muted-foreground">
+            <div className="space-y-4 text-white">
               <p>
-                El seguro de caución es un contrato donde una aseguradora (Aserta) se compromete a indemnizar a un tercero (el asegurado o beneficiario) si la empresa que contrata el seguro (el tomador) incumple sus obligaciones contractuales o legales.
+                El seguro de caución es un contrato mediante el cual una compañía aseguradora se obliga a indemnizar al beneficiario (asegurado) por los perjuicios que sufra en caso de que el contratista (tomador) incumpla las obligaciones, legales o contractuales, que mantenga con él.
               </p>
               <p>
-                En esencia, <strong className="text-primary">es una garantía de cumplimiento que sustituye al aval bancario.</strong> Su objetivo es asegurar que un acuerdo se cumpla en tiempo y forma, protegiendo al beneficiario sin perjudicar la capacidad financiera del contratista. Nosotros, en Confía, actuamos como mediadores expertos para facilitarte el acceso a estos seguros.
+               En esencia, es una garantía de cumplimiento que sustituye a los tradicionales y más costosos avales bancarios. Su principal objetivo es asegurar que un acuerdo entre dos partes se cumpla en tiempo y forma, protegiendo al beneficiario sin perjudicar la capacidad financiera del contratista.
               </p>
             </div>
           </div>
