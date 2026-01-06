@@ -23,21 +23,11 @@ const steps = [
 ];
 
 const HowItWorks = () => {
-  const image = PlaceHolderImages.find(p => p.id === 'about-office');
   return (
     <section id="como-trabajamos" className="py-16 sm:py-24 bg-transparent">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-square lg:aspect-[4/3.5] rounded-lg overflow-hidden">
-             {image && (
-                <Image
-                    src={image.imageUrl}
-                    alt={image.description}
-                    fill
-                    className="object-cover"
-                    data-ai-hint={image.imageHint}
-                />
-             )}
              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
           </div>
           <div>
