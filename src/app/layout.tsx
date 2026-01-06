@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer';
 import { cn } from '@/lib/utils';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const inter = Inter({
   subsets: ['latin'],

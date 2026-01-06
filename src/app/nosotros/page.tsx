@@ -3,6 +3,7 @@ import CtaSection from "@/components/pages/shared/CtaSection";
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import AnimatedOnScroll from '@/components/AnimatedOnScroll';
+import Link from 'next/link';
 
 const AboutPage = () => {
   return (
@@ -29,7 +30,7 @@ const AboutPage = () => {
                       CONFÍA Agencia de Seguros nació de la visión de un grupo de profesionales con décadas de experiencia en los sectores asegurador y financiero. Observamos una necesidad clara en el mercado: las empresas españolas requerían un socio especializado en garantías que comprendiera sus retos y les ofreciera soluciones más allá del rígido sistema bancario.
                   </p>
                   <p>
-                    Decidimos crear una agencia de mediación enfocada 100% en el cliente, capaz de ofrecer un <strong className="text-primary">asesoramiento experto y un servicio ágil.</strong> Para ello, nos asociamos con <strong className="text-primary">Aserta</strong>, la compañía aseguradora líder y especialista en seguros de caución, para distribuir sus productos.
+                    Decidimos crear una agencia de mediación enfocada 100% en el cliente, capaz de ofrecer un <strong className="text-primary">asesoramiento experto y un servicio ágil.</strong> Para ello, nos asociamos con <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>, la compañía aseguradora líder y especialista en seguros de caución, para distribuir sus productos.
                   </p>
                   <p>
                       Esta alianza nos permite combinar la <strong className="text-primary">solidez y capacidad de suscripción de una gran aseguradora</strong> con la <strong className="text-primary">cercanía, flexibilidad y enfoque en el cliente</strong> de una agencia especializada. En Confía no eres un número, eres un protegido.

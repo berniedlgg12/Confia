@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
+import Link from 'next/link';
 
 const testimonials = [
   {
@@ -53,7 +54,7 @@ const TestimonialsSection = () => {
                   <Card className="border-none shadow-none bg-transparent">
                   <CardContent className="flex flex-col items-center text-center p-0">
                       <blockquote className="max-w-2xl text-xl font-medium text-primary">
-                      &ldquo;{testimonial.text}&rdquo;
+                      &ldquo;{testimonial.name === 'Laura Méndez' ? <>Necesitábamos una solución para las cantidades entregadas a cuenta que no afectara nuestra financiación. Confía entendió nuestras necesidades y nos ofreció una póliza de caución de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link> que nos ha dado una flexibilidad enorme.</> : testimonial.name === 'Carlos Jiménez' ? <>Teníamos varias obras en marcha y la gestión de avales bancarios era un quebradero de cabeza. El equipo de Confía nos asesoró y consolidamos todas nuestras garantías bajo seguros de caución de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>. El ahorro en costes y tiempo ha sido notable.</> : testimonial.text}&rdquo;
                       </blockquote>
                       <div className="mt-6 flex items-center gap-4">
                       <div>

@@ -38,7 +38,7 @@ const ValueProposition = () => {
             Tu garantía de cumplimiento, sin ataduras
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Combinamos el respaldo de la aseguradora líder, Aserta, con un servicio de mediación cercano y experto para ofrecerte la mejor solución en seguros de caución.
+            Combinamos el respaldo de la aseguradora líder, <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>, con un servicio de mediación cercano y experto para ofrecerte la mejor solución en seguros de caución.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -52,7 +52,7 @@ const ValueProposition = () => {
                 </CardHeader>
                 <CardContent>
                   <CardTitle className="text-lg font-semibold">{feature.title}</CardTitle>
-                  <p className="mt-2 text-sm text-muted-foreground">{feature.description}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{feature.title === 'Solidez de Aserta' ? 'La aseguradora líder en caución en España, con máxima capacidad de suscripción y reaseguro internacional.' : feature.description}</p>
                 </CardContent>
               </Card>
             </Link>

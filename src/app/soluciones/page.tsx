@@ -91,7 +91,7 @@ const SolutionsPage = () => {
               Soluciones de Caución a tu Medida
             </h1>
             <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
-              A través de Aserta, ofrecemos una solución de caución para cada tipo de garantía que tu empresa necesite. Encuentra la tuya.
+              A través de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>, ofrecemos una solución de caución para cada tipo de garantía que tu empresa necesite. Encuentra la tuya.
             </p>
           </div>
         </div>

@@ -41,7 +41,9 @@ const HowItWorks = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-primary">{step.name}</h3>
-                <p className="mt-1 text-primary-foreground">{step.description}</p>
+                <p className="mt-1 text-primary-foreground">
+                  {step.name === '2. Estudio' ? <><Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>, la aseguradora, realiza el estudio de viabilidad sin coste para ofrecerte las mejores condiciones.</> : step.description}
+                </p>
               </div>
             </div>
           ))}

@@ -3,6 +3,7 @@ import { Check, Users, Shield, Building, Banknote, TrendingUp, Unlock, Zap, Scal
 import CtaSection from '@/components/pages/shared/CtaSection';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import AnimatedOnScroll from '@/components/AnimatedOnScroll';
+import Link from 'next/link';
 
 const figures = [
   { name: 'Tomador del Seguro', role: 'El contratista o empresa que contrata la póliza para garantizar su obligación.', icon: <Users className="w-8 h-8 text-accent" /> },
@@ -100,7 +101,9 @@ const SuretyBondPage = () => {
                 <div key={figure.name} className="text-center bg-card p-8 rounded-lg shadow-sm border">
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mb-4">{figure.icon}</div>
                   <h3 className="text-xl font-semibold text-primary">{figure.name}</h3>
-                  <p className="mt-2 text-muted-foreground">{figure.role}</p>
+                  <p className="mt-2 text-muted-foreground">
+                    {figure.name === 'Asegurador' ? <>La compañía de seguros (<Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>) que emite la póliza y asume el riesgo.</> : figure.role}
+                  </p>
                 </div>
               ))}
             </div>
@@ -115,7 +118,11 @@ const SuretyBondPage = () => {
                 <AccordionItem value={item.question} key={item.question}>
                   <AccordionTrigger className="text-lg text-left">{item.question}</AccordionTrigger>
                   <AccordionContent className="text-base text-muted-foreground">
-                    {item.answer}
+                    {item.question === '¿Qué coste tiene un seguro de caución?' ? <>El coste, llamado prima, es un porcentaje del importe a garantizar y varía según el riesgo, plazo y tipo de obligación. Suele ser significativamente más económico que las comisiones de un aval bancario. En Confía, negociamos con <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link> para conseguirte el mejor precio.</> : 
+                    item.question === '¿Cuánto se tarda en conseguir una póliza?' ? <>El proceso es muy ágil. Una vez presentada la documentación necesaria, <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link> puede realizar el estudio y emitir la póliza en un plazo de 24 a 72 horas, dependiendo de la complejidad de la operación.</> : 
+                    item.question === '¿Cualquier empresa puede contratar un seguro de caución?' ? <>La aseguradora (<Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>) realiza un estudio de viabilidad de la empresa solicitante. Se valora la solvencia técnica y financiera para asegurar que la compañía puede cumplir con el contrato garantizado. En Confía te ayudamos a preparar y presentar tu caso.</> :
+                    item.answer
+                    }
                   </AccordionContent>
                 </AccordionItem>
               ))}

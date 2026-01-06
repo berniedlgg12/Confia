@@ -19,7 +19,7 @@ const Footer = () => {
             />
           </Link>
           <p className="text-sm text-primary-foreground/80 max-w-sm">
-            Agencia de seguros especializada en la mediación de seguros de caución de Aserta. Generamos soluciones simples para empresas.
+            Agencia de seguros especializada en la mediación de seguros de caución de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>. Generamos soluciones simples para empresas.
           </p>
           <div className="flex items-center gap-4 mt-4">
              <a href="https://www.instagram.com/confiax.es" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="lg:col-span-2">
-          <h3 className="font-headline text-base font-semibold mb-4">Navegación</h3>
+          <h3 className="font-headline text-base font-semibold mb-4 text-primary-foreground">Navegación</h3>
           <ul className="space-y-2">
             {FOOTER_LINKS.navigation.map((link) => (
               <li key={link.href}>
@@ -45,7 +45,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="lg:col-span-3">
-          <h3 className="font-headline text-base font-semibold mb-4">Contacto Directo</h3>
+          <h3 className="font-headline text-base font-semibold mb-4 text-primary-foreground">Contacto Directo</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-3">
               <Mail className="w-4 h-4 text-accent flex-shrink-0" />
@@ -62,7 +62,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="lg:col-span-3">
-          <h3 className="font-headline text-base font-semibold mb-4">Legal</h3>
+          <h3 className="font-headline text-base font-semibold mb-4 text-primary-foreground">Legal</h3>
           <ul className="space-y-2">
             {FOOTER_LINKS.legal.map((link) => (
               <li key={link.href}>
@@ -77,7 +77,7 @@ const Footer = () => {
       <div className="container py-6 border-t">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-center sm:text-left text-xs text-primary-foreground/60">
-            &copy; {new Date().getFullYear()} CONFÍA Agencia de Seguro S.L. Todos los derechos reservados. <br/> Confía actúa como agente de seguros mediador de productos de Aserta Aseguradora S.A.U.
+            &copy; {new Date().getFullYear()} CONFÍA Agencia de Seguro S.L. Todos los derechos reservados. <br/> Confía actúa como agente de seguros mediador de productos de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link> Aseguradora S.A.U.
           </p>
            <p className="text-xs text-primary-foreground/60 text-center sm:text-right">
             Diseño y Desarrollo Web por <a href="https://nextscenario.com" target="_blank" rel="noopener" className="underline hover:text-primary-foreground">Next Scenario</a>
