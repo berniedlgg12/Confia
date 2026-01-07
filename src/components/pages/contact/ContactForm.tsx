@@ -49,14 +49,34 @@ const ContactForm = () => {
   const { formState: { isSubmitting } } = form;
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
-    // Aquí se integraría la lógica de envío, por ejemplo a una API.
-    await new Promise(resolve => setTimeout(resolve, 1500)); 
-    console.log(data);
-    toast({
-      title: "Solicitud Recibida",
-      description: "Gracias por contactar con CONFÍA. Un asesor se pondrá en contacto con usted a la mayor brevedad.",
-    });
-    form.reset();
+    try {
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Solicitud Recibida",
+          description: "Gracias por contactar con CONFÍA. Un asesor se pondrá en contacto con usted a la mayor brevedad.",
+        });
+        form.reset();
+      } else {
+        throw new Error(result.error || 'Ocurrió un error al enviar la solicitud.');
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Ocurrió un error desconocido.';
+      toast({
+        title: "Error al enviar",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    }
   };
 
   return (
