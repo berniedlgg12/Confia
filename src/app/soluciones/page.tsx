@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import CtaSection from "@/components/pages/shared/CtaSection";
 import Link from "next/link";
-import { LucideIcon, Award, Building, Wind, Lightbulb, Zap, Ship, Plane, Home, Scale, HelpingHand, Wallet, Users, Landmark, FileText, ShoppingCart, Power, HandCoins, Globe, Building2, Briefcase, FileArchive, HeartHandshake, Shield, CircleDollarSign, Receipt } from "lucide-react";
+import { LucideIcon, Award, Building, Wind, Lightbulb, Zap, Ship, Plane, Home, Scale, HelpingHand, Wallet, Users, Landmark, FileText, ShoppingCart, Power, HandCoins, Globe, Building2, Briefcase, FileArchive, Handshake, Shield, CircleDollarSign, Receipt } from "lucide-react";
 import AnimatedOnScroll from "@/components/AnimatedOnScroll";
 
 type Solution = {
