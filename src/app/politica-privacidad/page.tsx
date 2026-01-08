@@ -1,4 +1,3 @@
-
 import AnimatedOnScroll from '@/components/AnimatedOnScroll';
 import Link from 'next/link';
 
@@ -123,5 +122,3 @@ const PrivacyPolicyPage = () => {
 };
 
 export default PrivacyPolicyPage;
-
-    

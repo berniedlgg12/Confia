@@ -10,7 +10,7 @@ const HeroSection = () => {
           Generamos Soluciones Simples
         </h1>
         <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground sm:text-xl">
-          En Confía te ayudamos a contratar los seguros de caución de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>, la aseguradora líder, de forma rápida, clara y personalizada.
+          En Confía te ayudamos a contratar los seguros de caución de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" className="font-bold" style={{color: '#E10600'}}>Aserta</Link>, la aseguradora líder, de forma rápida, clara y personalizada.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button asChild size="lg">

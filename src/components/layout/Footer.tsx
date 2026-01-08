@@ -19,7 +19,7 @@ const Footer = () => {
             />
           </Link>
           <p className="text-sm text-primary-foreground/80 max-w-sm">
-            Agencia de seguros especializada en la mediación de seguros de caución de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link>. Generamos soluciones simples para empresas.
+            Agencia de seguros especializada en la mediación de seguros de caución de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" className="font-bold" style={{color: '#E10600'}}>Aserta</Link>. Generamos soluciones simples para empresas.
           </p>
           <div className="flex items-center gap-4 mt-4">
              <a href="https://www.instagram.com/confiax.es" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
@@ -77,7 +77,7 @@ const Footer = () => {
       <div className="container py-6 border-t">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-center sm:text-left text-xs text-primary-foreground/60">
-            &copy; {new Date().getFullYear()} CONFÍA Agencia de Seguro S.L. Todos los derechos reservados. <br/> Confía actúa como agente de seguros mediador de productos de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" style={{color: '#E10600'}}>Aserta</Link> Aseguradora S.A.U.
+            &copy; {new Date().getFullYear()} CONFÍA Agencia de Seguro S.L. Todos los derechos reservados. <br/> Confía actúa como agente de seguros mediador de productos de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" className="font-bold" style={{color: '#E10600'}}>Aserta</Link> Aseguradora S.A.U.
           </p>
         </div>
       </div>
