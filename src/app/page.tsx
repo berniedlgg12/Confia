@@ -1,3 +1,4 @@
+
 import HeroSection from '@/components/pages/home/HeroSection';
 import ValueProposition from '@/components/pages/home/ValueProposition';
 import ServicesSnapshot from '@/components/pages/home/ServicesSnapshot';
@@ -17,10 +18,10 @@ export default function Home() {
         <ValueProposition />
       </AnimatedOnScroll>
       <AnimatedOnScroll>
-        <MottoSection />
+        <HowItWorks />
       </AnimatedOnScroll>
       <AnimatedOnScroll>
-        <HowItWorks />
+        <MottoSection />
       </AnimatedOnScroll>
       <AnimatedOnScroll>
         <CtaSection />
