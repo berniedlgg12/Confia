@@ -4,6 +4,7 @@ import ServicesSnapshot from '@/components/pages/home/ServicesSnapshot';
 import HowItWorks from '@/components/pages/home/AdvantagesIntro';
 import CtaSection from '@/components/pages/shared/CtaSection';
 import AnimatedOnScroll from '@/components/AnimatedOnScroll';
+import MottoSection from '@/components/pages/home/MottoSection';
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
       </AnimatedOnScroll>
       <AnimatedOnScroll>
         <ValueProposition />
+      </AnimatedOnScroll>
+      <AnimatedOnScroll>
+        <MottoSection />
       </AnimatedOnScroll>
       <AnimatedOnScroll>
         <HowItWorks />
