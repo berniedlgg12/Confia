@@ -26,7 +26,6 @@ export default function RootLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // This logic now lives inside the WelcomeAnimation component
     const hasSeenAnimation = sessionStorage.getItem('hasSeenConfiaAnimation');
     if (hasSeenAnimation) {
       setLoading(false);
@@ -40,33 +39,35 @@ export default function RootLayout({
           {loading && <WelcomeAnimation onAnimationComplete={() => setLoading(false)} />}
         </AnimatePresence>
         
-        <motion.div 
-          initial={{ opacity: loading ? 0 : 1 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: loading ? 0 : 0 }}
-          className="flex flex-col flex-grow min-h-screen"
-        >
-          <div 
-            className="absolute inset-0 -z-20 h-full"
-            style={{
-              backgroundImage: 'linear-gradient(to bottom, #FFFFFF 0%, #F2A36B 25%, #E10600 50%, #7A0C14 75%, #000000 100%)',
-            }}
-          ></div>
-          <div className="fixed inset-0 -z-10 h-full w-full overflow-hidden">
-              <div className="absolute -right-96 -top-10 h-full w-full opacity-10 transform -rotate-[25deg]">
-                  <Image
-                      src="/Logo/logotipo-usos-08.png"
-                      alt="Confía Logo Watermark"
-                      fill
-                      objectFit="contain"
-                      quality={20}
-                  />
-              </div>
-          </div>
-          <Header hideLogo={loading} />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </motion.div>
+        {!loading && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col flex-grow min-h-screen"
+          >
+            <div 
+              className="absolute inset-0 -z-20 h-full"
+              style={{
+                backgroundImage: 'linear-gradient(to bottom, #FFFFFF 0%, #F2A36B 25%, #E10600 50%, #7A0C14 75%, #000000 100%)',
+              }}
+            ></div>
+            <div className="fixed inset-0 -z-10 h-full w-full overflow-hidden">
+                <div className="absolute -right-96 -top-10 h-full w-full opacity-10 transform -rotate-[25deg]">
+                    <Image
+                        src="/Logo/logotipo-usos-08.png"
+                        alt="Confía Logo Watermark"
+                        fill
+                        objectFit="contain"
+                        quality={20}
+                    />
+                </div>
+            </div>
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </motion.div>
+        )}
         
         <Toaster />
         <SpeedInsights />
