@@ -16,7 +16,11 @@ import {
   SheetClose,
 } from "@/components/ui/sheet"
 
-const Header = () => {
+type HeaderProps = {
+  hideLogo?: boolean;
+};
+
+const Header = ({ hideLogo = false }: HeaderProps) => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +41,9 @@ const Header = () => {
       isScrolled ? "border-b bg-background/80 backdrop-blur-sm" : "bg-transparent border-b border-transparent"
     )}>
       <div className="container flex h-20 items-center">
-        <Logo />
+        <div className={cn('transition-opacity duration-300', hideLogo ? 'opacity-0' : 'opacity-100')}>
+          <Logo />
+        </div>
         <nav className="hidden md:flex md:ml-auto md:items-center md:gap-8">
           {NAV_LINKS.map((link) => (
             <Link
