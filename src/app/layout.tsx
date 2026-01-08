@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import WelcomeAnimation from '@/components/layout/WelcomeAnimation';
 import { AnimatePresence, motion } from 'framer-motion';
+import CookieConsentBanner from '@/components/layout/CookieConsentBanner';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -70,6 +71,7 @@ export default function RootLayout({
         )}
         
         <Toaster />
+        <CookieConsentBanner />
         <SpeedInsights />
       </body>
     </html>
