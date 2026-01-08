@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
 
 type WelcomeAnimationProps = {
   onAnimationComplete: () => void;
@@ -47,16 +46,13 @@ const WelcomeAnimation = ({ onAnimationComplete }: WelcomeAnimationProps) => {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
-                style={{
-                    width: '360px',
-                    height: '100px',
-                }}
+                className="w-[480px] h-auto"
             >
                 <Image
-                    src="/Logo/logotipo-usos-01.png"
+                    src="/Logo/logotipo-usos-19.png"
                     alt="CONFÍA Logo"
-                    width={360}
-                    height={100}
+                    width={480}
+                    height={133}
                     priority
                 />
             </motion.div>
