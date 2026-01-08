@@ -1,8 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import CtaSection from "@/components/pages/shared/CtaSection";
 import Link from "next/link";
-import { LucideIcon, Award, Truck, FileText, Sun, Building2, Briefcase, Plane, Wrench, FileArchive, Building, Recycle, HeartHandshake } from "lucide-react";
+import { LucideIcon, Award, Building, Wind, Lightbulb, Zap, Ship, Plane, Home, Scale, HelpingHand, Wallet, Users, Landmark, FileText, ShoppingCart, Power, HandCoins, Globe, Building2, Briefcase, FileArchive, HeartHandshake, Shield, CircleDollarSign, Receipt } from "lucide-react";
 import AnimatedOnScroll from "@/components/AnimatedOnScroll";
 
 type Solution = {
@@ -10,74 +9,86 @@ type Solution = {
   icon: LucideIcon;
   title: string;
   description: string;
-  when: string;
-  docs: string;
 };
 
 const solutions: Solution[] = [
   {
-    id: "licitaciones",
+    id: "zero-risk",
+    icon: Shield,
+    title: "Zero Risk Score",
+    description: "Previene la morosidad y cubre el riesgo de tus operaciones de manera garantizada empleando Inteligencia Artificial en tiempo real.",
+  },
+  {
+    id: "contratos-publicos",
     icon: Award,
-    title: "Licitaciones y Contratos",
-    description: "Garantías para asegurar el mantenimiento de la oferta (provisional) o el cumplimiento del contrato (definitiva). Imprescindibles para contratar con la Administración Pública y grandes empresas.",
-    when: "Al presentar una oferta a un concurso o al formalizar un contrato público o privado.",
-    docs: "Pliegos de la licitación, contrato a firmar, cuentas anuales de la empresa."
+    title: "Cumplimiento de contratos públicos",
+    description: "Se garantiza el cumplimiento de contratos que se adjudican por medio de licitación pública, que pueden ser de obra, servicio, suministro o concesiones.",
   },
   {
-    id: "aduanas",
-    icon: Truck,
-    title: "Garantías ante la Aduana",
-    description: "Asegura el pago de aranceles e impuestos derivados de operaciones de importación y tránsito aduanero, agilizando el comercio exterior.",
-    when: "Al realizar importaciones, operar como depósito aduanero o en regímenes de tránsito.",
-    docs: "Autorización de la AEAT, histórico de operaciones, cuentas anuales."
-  },
-  {
-    id: "subvenciones",
-    icon: FileText,
-    title: "Anticipo de Subvenciones",
-    description: "Permite el cobro anticipado de subvenciones públicas, garantizando a la Administración el buen fin de los fondos o su devolución en caso de incumplimiento.",
-    when: "Al ser beneficiario de una subvención pública que permite el cobro por adelantado.",
-    docs: "Resolución de concesión de la subvención, proyecto a realizar, cuentas anuales."
+    id: "contratos-privados",
+    icon: Handshake,
+    title: "Cumplimiento de contratos privados",
+    description: "Se garantiza el cumplimiento de contratos entre entidades privadas.",
   },
   {
     id: "renovables",
-    icon: Sun,
-    title: "Energías Renovables",
-    description: "Garantías exigidas para asegurar los puntos de conexión a la red eléctrica (REE), la construcción o el desmantelamiento de plantas fotovoltaicas o eólicas.",
-    when: "En las distintas fases de desarrollo de un proyecto de energía renovable.",
-    docs: "Resguardo del punto de conexión, documentación del proyecto, SPV y datos de los socios."
+    icon: Wind,
+    title: "Energías renovables",
+    description: "Se garantiza el correcto desarrollo y puesta en marcha de proyectos de energía renovable.",
   },
   {
-    id: "promotores",
-    icon: Building2,
-    title: "Cantidades a Cuenta (L.O.E.)",
-    description: "Garantía obligatoria para promotores inmobiliarios que asegura la devolución de las cantidades entregadas a cuenta por los compradores de vivienda sobre plano.",
-    when: "Antes de recibir anticipos de los compradores de una promoción inmobiliaria.",
-    docs: "Licencia de obras, documentación de la promoción, datos de la sociedad promotora."
+    id: "omie",
+    icon: Power,
+    title: "OMIE - Compraventa de electricidad",
+    description: "Responden de la compra de electricidad en el mercado y aseguran su pago.",
   },
-    {
+  {
+    id: "meff",
+    icon: Zap,
+    title: "MEFF - Productores y comercializadores",
+    description: "Aseguran el pago de los posibles desvíos estimados entre las compraventas y los consumos finales de electricidad.",
+  },
+  {
+    id: "aduanas",
+    icon: Ship,
+    title: "Aduanas",
+    description: "Aseguran el pago a las autoridades aduaneras de liquidaciones devengadas por operaciones de importación.",
+  },
+  {
+    id: "aena",
+    icon: Plane,
+    title: "AENA",
+    description: "Garantiza el pago de tasas aeroportuarias facturadas a las aerolíneas.",
+  },
+  {
+    id: "devolucion-cantidades",
+    icon: HandCoins,
+    title: "Devolución de cantidades anticipadas en la compra de viviendas",
+    description: "Asegura a los compradores de vivienda la devolución de los anticipos.",
+  },
+  {
+    id: "fiscales-cnmc",
+    icon: Landmark,
+    title: "Garantías fiscales y sanciones CNMC",
+    description: "Los contenciosos derivados de liquidaciones fiscales requieren la constitución de garantías que permitan el desarrollo del litigio.",
+  },
+  {
+    id: "subvenciones",
+    icon: CircleDollarSign,
+    title: "Subvenciones",
+    description: "Garantiza la devolución de las ayudas obtenidas de las administraciones para el desarrollo de determinadas actuaciones, en caso de incumplimiento del proyecto subvencionado.",
+  },
+  {
     id: "arrendamiento",
-    icon: HeartHandshake,
-    title: "Garantía de Arrendamiento",
-    description: "Una alternativa al depósito o aval bancario para garantizar al arrendador el pago de la renta en alquileres de locales comerciales, naves u oficinas.",
-    when: "Al firmar un contrato de alquiler de un inmueble para uso comercial o industrial.",
-    docs: "Contrato de arrendamiento, datos financieros del inquilino (empresa o autónomo)."
+    icon: Building,
+    title: "Arrendamiento",
+    description: "Garantiza el pago de rentas por alquiler de locales destinados a actividad empresarial.",
   },
   {
-    id: "otras",
-    icon: Briefcase,
-    title: "Otras Garantías Técnicas",
-    description: "Cubrimos garantías específicas como las requeridas para operar en AENA, para agentes del mercado eléctrico (OMIE/MEFF) o para agencias de viaje.",
-    when: "Al iniciar actividades en sectores regulados que exigen garantías específicas.",
-    docs: "Normativa aplicable, documentación específica del sector, cuentas anuales."
-  },
-    {
-    id: "fiscales",
-    icon: FileArchive,
-    title: "Garantías Fiscales",
-    description: "Garantías ante la Agencia Tributaria para el aplazamiento de deudas fiscales (IVA, IS, etc.) o para recurrir sanciones y liquidaciones.",
-    when: "Al solicitar un aplazamiento de impuestos o al interponer un recurso ante la AEAT.",
-    docs: "Notificación de la AEAT, detalle de la deuda o sanción, cuentas anuales."
+    id: "nowo",
+    icon: Home,
+    title: "Nowo",
+    description: "Garantiza el pago del alquiler, suministros y gastos de comunidad de vivienda particular.",
   },
 ];
 
@@ -110,16 +121,8 @@ const SolutionsPage = () => {
                         <CardTitle className="text-xl mt-1">{solution.title}</CardTitle>
                       </div>
                     </CardHeader>
-                    <CardContent className="flex-grow space-y-4">
+                    <CardContent className="flex-grow">
                       <p className="text-muted-foreground">{solution.description}</p>
-                      <div>
-                        <h4 className="font-semibold text-sm text-primary">¿Cuándo se pide?</h4>
-                        <p className="text-sm text-muted-foreground">{solution.when}</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-sm text-primary">Documentación habitual</h4>
-                        <p className="text-sm text-muted-foreground">{solution.docs}</p>
-                      </div>
                     </CardContent>
                   </Card>
                 </Link>

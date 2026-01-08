@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { FileText, Award, Truck, LucideIcon, Building2, Sun, Plane, Scaling, Briefcase, FileArchive } from 'lucide-react';
+import { FileText, Award, Truck, LucideIcon, Building2, Sun, Ship, Landmark, HandCoins, Building, Home, Wind, Handshake } from 'lucide-react';
 
 type Solution = {
   icon: LucideIcon;
@@ -13,39 +13,39 @@ type Solution = {
 const solutions: Solution[] = [
   {
     icon: Award,
-    title: 'Licitaciones Públicas y Privadas',
-    description: 'Garantías de mantenimiento de oferta, cumplimiento de contrato y buena ejecución.',
-    href: '/soluciones#licitaciones',
+    title: 'Cumplimiento de contratos públicos',
+    description: 'Garantías para licitaciones y adjudicaciones de obra, servicio o suministro.',
+    href: '/soluciones#contratos-publicos',
   },
   {
-    icon: Truck,
-    title: 'Garantías Aduaneras',
-    description: 'Asegura el pago de aranceles e impuestos en operaciones de comercio exterior.',
-    href: '/soluciones#aduanas',
+    icon: Handshake,
+    title: 'Cumplimiento de contratos privados',
+    description: 'Garantiza el cumplimiento de contratos entre entidades privadas.',
+    href: '/soluciones#contratos-privados',
   },
   {
-    icon: FileText,
-    title: 'Aplazamientos y Subvenciones',
-    description: 'Garantiza el cumplimiento de pagos aplazados a la administración o el buen fin de subvenciones.',
-    href: '/soluciones#subvenciones',
+    icon: HandCoins,
+    title: 'Devolución de cantidades anticipadas',
+    description: 'Asegura a los compradores de vivienda la devolución de los anticipos.',
+    href: '/soluciones#devolucion-cantidades',
   },
   {
-    icon: Sun,
-    title: 'Energías Renovables',
-    description: 'Garantías para puntos de conexión, construcción y desmantelamiento de plantas.',
-    href: '/soluciones#renovables',
+    icon: Landmark,
+    title: 'Garantías fiscales y sanciones',
+    description: 'Garantías para litigios y para la constitución de garantías que permitan el desarrollo del litigio.',
+    href: '/soluciones#fiscales-cnmc',
   },
   {
-    icon: Building2,
-    title: 'Cantidades a Cuenta (L.O.E.)',
-    description: 'Protege las cantidades anticipadas por los compradores en promociones de viviendas.',
-    href: '/soluciones#promotores',
+    icon: Building,
+    title: 'Arrendamiento',
+    description: 'Garantiza el pago de rentas por alquiler de locales destinados a actividad empresarial.',
+    href: '/soluciones#arrendamiento',
   },
   {
-    icon: Briefcase,
-    title: 'Otras Garantías Técnicas',
-    description: 'Garantías para AENA, operadores del mercado eléctrico (OMIE/MEFF) y más.',
-    href: '/soluciones#otras',
+    icon: Home,
+    title: 'Nowo',
+    description: 'Garantiza el pago del alquiler, suministros y gastos de comunidad de vivienda particular.',
+    href: '/soluciones#nowo',
   },
 ];
 
