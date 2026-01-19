@@ -5,6 +5,11 @@ import { Button } from '@/components/ui/button';
 
 const presentations = [
   {
+    title: 'Cómo Funciona el Seguro de Caución',
+    description: 'Una guía paso a paso sobre el proceso de obtención y funcionamiento de un seguro de caución, desde la solicitud hasta la emisión.',
+    fileUrl: '/presentations/CONFIA-Como-Funciona-Caucion.pdf',
+  },
+  {
     title: 'Presentación Corporativa CONFÍA',
     description: 'Un resumen completo de nuestros servicios, filosofía y ventajas competitivas. Ideal para nuevos clientes.',
     fileUrl: '/presentations/CONFIA-Presentacion-Corporativa.pdf',
