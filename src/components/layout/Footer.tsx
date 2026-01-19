@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-transparent text-primary-foreground border-t">
       <div className="container py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4 flex flex-col gap-4">
-          <Link href="/">
+          <Link href="/presentaciones">
             <Image 
               src="/Logo/logotipo-usos-19.png" 
               alt="CONFÍA Logo"
