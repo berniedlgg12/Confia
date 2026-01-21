@@ -35,6 +35,9 @@ export default function RootLayout({
 
   return (
     <html lang="es" className={`scroll-smooth ${inter.variable}`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={cn('font-body antialiased min-h-screen flex flex-col relative')}>
         <AnimatePresence>
           {loading && <WelcomeAnimation onAnimationComplete={() => setLoading(false)} />}
