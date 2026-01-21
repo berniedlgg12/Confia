@@ -1,6 +1,10 @@
-
+import type { Metadata } from 'next';
 import AnimatedOnScroll from '@/components/AnimatedOnScroll';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Aviso Legal | Confía',
+};
 
 const AvisoLegalPage = () => {
   return (

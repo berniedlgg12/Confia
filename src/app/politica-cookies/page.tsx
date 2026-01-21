@@ -1,5 +1,10 @@
+import type { Metadata } from 'next';
 import AnimatedOnScroll from '@/components/AnimatedOnScroll';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Política de Cookies | Confía',
+};
 
 const CookiesPolicyPage = () => {
   return (

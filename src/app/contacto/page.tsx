@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import ContactForm from '@/components/pages/contact/ContactForm';
 import AnimatedOnScroll from '@/components/AnimatedOnScroll';
+
+export const metadata: Metadata = {
+  title: 'Solicitar Estudio de Caución | Confía',
+};
 
 const ContactPage = () => {
   return (

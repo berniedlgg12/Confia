@@ -1,5 +1,10 @@
+import type { Metadata } from 'next';
 import AnimatedOnScroll from '@/components/AnimatedOnScroll';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Política de Privacidad | Confía',
+};
 
 const PrivacyPolicyPage = () => {
   return (
@@ -78,7 +83,7 @@ const PrivacyPolicyPage = () => {
               Los datos personales no se cederán a terceros, salvo obligación legal o cuando sea necesario para la correcta gestión de la solicitud.
             </p>
             <p>
-              En el marco de la actividad de mediación, los datos podrán ser comunicados a la entidad aseguradora <strong>Aserta Europa, Seguros y Reaseguros, S.A.U.</strong>, exclusivamente cuando resulte necesario para el análisis o tramitación del seguro solicitado.
+              En el marco de la actividad de mediación, los datos podrán ser comunicados a la entidad aseguradora <strong><strong>Aserta</strong> Europa, Seguros y Reaseguros, S.A.U.</strong>, exclusivamente cuando resulte necesario para el análisis o tramitación del seguro solicitado.
             </p>
 
             <h2 className="text-2xl font-bold text-primary">7. Derechos de los usuarios</h2>

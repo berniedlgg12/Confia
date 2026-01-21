@@ -8,11 +8,11 @@ import AnimatedOnScroll from '@/components/AnimatedOnScroll';
 import MottoSection from '@/components/pages/home/MottoSection';
 
 export const metadata: Metadata = {
-  title: 'Confía | Seguros de Caución Aserta | Rápido y Claro',
+  title: 'Confía | Seguros de Caución para Empresas',
   description: 'En Confía te ayudamos a contratar los seguros de caución de Aserta, la aseguradora líder, de forma rápida, clara y personalizada. Alternativa al aval bancario.',
   keywords: 'seguro de caución, caución para licitaciones, aserta, garantía aduanera, caución subvenciones, alternativa al aval bancario, confía seguros',
   openGraph: {
-    title: 'Confía | Seguros de Caución Aserta | Rápido y Claro',
+    title: 'Confía | Seguros de Caución para Empresas',
     description: 'Soluciones en seguros de caución para empresas. Obtén tu garantía con Aserta de forma ágil y sin consumir tus líneas de crédito.',
     url: 'https://www.confiax.es',
     siteName: 'Confía Agencia de Seguros',

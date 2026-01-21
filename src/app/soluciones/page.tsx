@@ -1,8 +1,13 @@
+import type { Metadata } from 'next';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import CtaSection from "@/components/pages/shared/CtaSection";
 import Link from "next/link";
-import { LucideIcon, Award, Building, Wind, Lightbulb, Zap, Ship, Plane, Home, Scale, HelpingHand, Wallet, Users, Landmark, FileText, ShoppingCart, Power, HandCoins, Globe, Building2, Briefcase, FileArchive, Handshake, Shield, CircleDollarSign, Receipt } from "lucide-react";
+import { LucideIcon, Award, Building, Wind, Lightbulb, Zap, Ship, Plane, Home, Scale, HelpingHand, Wallet, Users, Landmark, FileText, ShoppingCart, Power, HandCoins, Globe, Building2, Briefcase, FileArchive, Shield, CircleDollarSign, Receipt, Handshake } from "lucide-react";
 import AnimatedOnScroll from "@/components/AnimatedOnScroll";
+
+export const metadata: Metadata = {
+  title: 'Soluciones en Seguros de Caución | Confía',
+};
 
 type Solution = {
   id: string;
@@ -13,82 +18,83 @@ type Solution = {
 
 const solutions: Solution[] = [
   {
-    id: "zero-risk",
-    icon: Shield,
-    title: "Zero Risk Score",
-    description: "Previene la morosidad y cubre el riesgo de tus operaciones de manera garantizada empleando Inteligencia Artificial en tiempo real.",
-  },
-  {
     id: "contratos-publicos",
     icon: Award,
-    title: "Cumplimiento de contratos públicos",
-    description: "Se garantiza el cumplimiento de contratos que se adjudican por medio de licitación pública, que pueden ser de obra, servicio, suministro o concesiones.",
+    title: "Garantías para Licitaciones Públicas",
+    description: "Garantías de licitación (provisionales) y de buena ejecución (definitivas) para contratos con la Administración Pública.",
   },
   {
     id: "contratos-privados",
     icon: Handshake,
-    title: "Cumplimiento de contratos privados",
-    description: "Se garantiza el cumplimiento de contratos entre entidades privadas.",
-  },
-  {
-    id: "renovables",
-    icon: Wind,
-    title: "Energías renovables",
-    description: "Se garantiza el correcto desarrollo y puesta en marcha de proyectos de energía renovable.",
-  },
-  {
-    id: "omie",
-    icon: Power,
-    title: "OMIE - Compraventa de electricidad",
-    description: "Responden de la compra de electricidad en el mercado y aseguran su pago.",
-  },
-  {
-    id: "meff",
-    icon: Zap,
-    title: "MEFF - Productores y comercializadores",
-    description: "Aseguran el pago de los posibles desvíos estimados entre las compraventas y los consumos finales de electricidad.",
-  },
-  {
-    id: "aduanas",
-    icon: Ship,
-    title: "Aduanas",
-    description: "Aseguran el pago a las autoridades aduaneras de liquidaciones devengadas por operaciones de importación.",
-  },
-  {
-    id: "aena",
-    icon: Plane,
-    title: "AENA",
-    description: "Garantiza el pago de tasas aeroportuarias facturadas a las aerolíneas.",
+    title: "Garantías entre Empresas Privadas",
+    description: "Asegura el cumplimiento de obligaciones contractuales en proyectos y transacciones entre compañías.",
   },
   {
     id: "devolucion-cantidades",
     icon: HandCoins,
-    title: "Devolución de cantidades anticipadas en la compra de viviendas",
-    description: "Asegura a los compradores de vivienda la devolución de los anticipos.",
+    title: "Garantías para Promotores Inmobiliarios",
+    description: "Asegura la devolución de las cantidades entregadas a cuenta por los compradores de viviendas sobre plano.",
   },
   {
-    id: "fiscales-cnmc",
+    id: "energias-renovables",
+    icon: Wind,
+    title: "Garantías para Energías Renovables",
+    description: "Aseguramos el cumplimiento de los hitos administrativos en la tramitación de proyectos fotovoltaicos y eólicos.",
+  },
+  {
+    id: "agencias-viaje",
+    icon: Plane,
+    title: "Garantías para Agencias de Viaje",
+    description: "Cubre la responsabilidad frente a los clientes en caso de insolvencia y asegura la repatriación si es necesario.",
+  },
+  {
+    id: "seguridad-privada",
+    icon: Shield,
+    title: "Garantías para Empresas de Seguridad",
+    description: "Garantía obligatoria exigida para la inscripción y operación de empresas de seguridad privada.",
+  },
+  {
+    id: "gestores-residuos",
+    icon: FileArchive,
+    title: "Garantías para Gestores de Residuos",
+    description: "Cubre la responsabilidad por el correcto tratamiento y gestión de residuos según la normativa medioambiental.",
+  },
+  {
+    id: "aduanas",
+    icon: Ship,
+    title: "Garantías de Aduanas",
+    description: "Garantiza el pago de aranceles e impuestos derivados de operaciones de importación y tránsito aduanero.",
+  },
+
+  {
+    id: "contenciosos-fiscales",
     icon: Landmark,
-    title: "Garantías fiscales y sanciones CNMC",
-    description: "Los contenciosos derivados de liquidaciones fiscales requieren la constitución de garantías que permitan el desarrollo del litigio.",
+    title: "Aplazamiento de Deudas y Sanciones",
+    description: "Permite aplazar el pago de deudas con Hacienda o la Seguridad Social, así como recurrir sanciones.",
   },
   {
     id: "subvenciones",
     icon: CircleDollarSign,
-    title: "Subvenciones",
-    description: "Garantiza la devolución de las ayudas obtenidas de las administraciones para el desarrollo de determinadas actuaciones, en caso de incumplimiento del proyecto subvencionado.",
+    title: "Garantías para Subvenciones",
+    description: "Asegura la correcta inversión de las subvenciones públicas y su devolución en caso de incumplimiento.",
+  },
+  {
+    id: "juego-online",
+    icon: Zap,
+    title: "Garantías para el Juego Online",
+    description: "Garantía exigida a los operadores de juego online para asegurar el pago de premios a los usuarios.",
   },
   {
     id: "arrendamiento",
     icon: Building,
-    title: "Arrendamiento",
-    description: "Garantiza el pago de rentas por alquiler de locales destinados a actividad empresarial.",
+    title: "Garantías de Arrendamiento",
+    description: "Asegura al propietario el cobro de la renta en alquileres de locales comerciales, oficinas y naves.",
   },
   {
-    id: "nowo",
-    icon: Home,
-    title: "Nowo",
-    description: "Garantiza el pago del alquiler, suministros y gastos de comunidad de vivienda particular.",
+    id: "internacional",
+    icon: Globe,
+    title: "Garantías Internacionales",
+    description: "Emitimos garantías para proyectos y licitaciones en cualquier país a través de nuestra red global.",
   },
 ];
 
@@ -102,7 +108,7 @@ const SolutionsPage = () => {
               Soluciones de Caución a tu Medida
             </h1>
             <p className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground sm:text-xl">
-              A través de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" className="font-bold" style={{color: '#E10600'}}>Aserta</Link>, ofrecemos una solución de caución para cada tipo de garantía que tu empresa necesite. Encuentra la tuya.
+              A través de <Link href="https://aserta.com.es" target="_blank" rel="noopener noreferrer" className="font-bold" style={{color: '#E10600'}}><strong>Aserta</strong></Link>, ofrecemos una solución de caución para cada tipo de garantía que tu empresa necesite. Encuentra la tuya.
             </p>
           </div>
         </div>
